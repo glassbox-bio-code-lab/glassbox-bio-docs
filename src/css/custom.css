@@ -231,7 +231,7 @@ img {
 .navbar__inner {
   max-width: calc(var(--max-width) + 80px);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 32px 0 16px;
 }
 
 .navbar__brand {

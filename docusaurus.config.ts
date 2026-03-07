@@ -54,6 +54,20 @@ const config: Config = {
           path: "docs",
           routeBasePath: "docs",
           sidebarPath: "./sidebars.ts",
+          sidebarItemsGenerator: async ({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) => {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+
+            return sidebarItems.filter(
+              (item) =>
+                !(
+                  item.type === "doc" &&
+                  (item.id === "index" || item.id === "intro")
+                ),
+            );
+          },
           editUrl: ({ docPath }) =>
             `https://github.com/ai-wes/glassbox_crud_api/tree/main/docs/${docPath}`,
         },
