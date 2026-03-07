@@ -71,6 +71,11 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     navbar: {
       title: "GLASSBOX BIO",
       logo: {
