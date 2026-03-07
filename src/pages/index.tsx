@@ -48,7 +48,7 @@ function loadDocsSidebarItems(): PropSidebarItem[] {
     }
   }
 
-  throw new Error('Unable to locate generated docs sidebar data.');
+  throw new Error("Unable to locate generated docs sidebar data.");
 }
 
 const docsSidebarItems = loadDocsSidebarItems();

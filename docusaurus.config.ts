@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Glassbox CRUD API Docs",
+  title: "Glassbox Bio Documentation",
   tagline:
     "Markdown-driven docs for deployment, operations, and API workflows.",
   favicon: "img/favicon.ico",
