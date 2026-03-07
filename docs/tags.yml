@@ -1,0 +1,44 @@
+platform:
+  label: Platform
+  permalink: /tags/platform
+  description: Platform-level product and workflow documentation.
+
+computational-safety-diligence:
+  label: Computational Safety Diligence
+  permalink: /tags/computational-safety-diligence
+  description: Core analysis product documentation.
+
+preflight:
+  label: PreFlight UI
+  permalink: /tags/preflight
+  description: Pre-submission validation and readiness documentation.
+
+add-ons:
+  label: Add-Ons
+  permalink: /tags/add-ons
+  description: Optional extension modules for the platform.
+
+ip-fto:
+  label: IP/FTO
+  permalink: /tags/ip-fto
+  description: Intellectual property and freedom-to-operate add-on documentation.
+
+deployment:
+  label: Deployment
+  permalink: /tags/deployment
+  description: Deployment and operations documentation.
+
+security:
+  label: Trust & Security
+  permalink: /tags/security
+  description: Security, provenance, and data-boundary documentation.
+
+reference:
+  label: Reference
+  permalink: /tags/reference
+  description: API, CLI, schema, and configuration reference documentation.
+
+release-notes:
+  label: Release Notes
+  permalink: /tags/release-notes
+  description: Product and platform release history.

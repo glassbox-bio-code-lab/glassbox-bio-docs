@@ -1,0 +1,12 @@
+label: Outputs
+position: 10
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Outputs
+  description: How to interpret the report package and decision artifacts.
+  slug: /computational-safety-diligence/outputs
+  keywords:
+    - outputs
+    - reports

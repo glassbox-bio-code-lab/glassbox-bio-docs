@@ -1,0 +1,12 @@
+label: Concepts
+position: 20
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Concepts
+  description: Core conceptual models behind computational safety diligence.
+  slug: /computational-safety-diligence/concepts
+  keywords:
+    - concepts
+    - ontology

@@ -1,0 +1,12 @@
+label: Validation System
+position: 20
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Validation System
+  description: Validation logic, readiness rules, and supported inputs for PreFlight UI.
+  slug: /preflight-ui/validation-system
+  keywords:
+    - validation
+    - schema

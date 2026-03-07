@@ -1,0 +1,12 @@
+label: Add-Ons
+position: 5
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Add-Ons
+  description: Optional capability layers such as IP/FTO and future extension modules.
+  slug: /add-ons
+  keywords:
+    - add-ons
+    - extensions

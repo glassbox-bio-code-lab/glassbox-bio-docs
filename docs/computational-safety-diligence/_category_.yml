@@ -1,0 +1,13 @@
+label: Computational Safety Diligence
+position: 3
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Computational Safety Diligence
+  description: Core analysis, outputs, concepts, and modules for the primary Glassbox Bio product.
+  slug: /computational-safety-diligence
+  keywords:
+    - core-analysis
+    - risk
+    - outputs

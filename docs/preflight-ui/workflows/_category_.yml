@@ -1,0 +1,12 @@
+label: Workflows
+position: 10
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Workflows
+  description: User workflows inside the PreFlight UI before analysis submission.
+  slug: /preflight-ui/workflows
+  keywords:
+    - workflow
+    - submission

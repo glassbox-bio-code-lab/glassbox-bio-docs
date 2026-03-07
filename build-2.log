@@ -1,0 +1,58 @@
+
+> docs-site@0.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 1.55s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 6.79s
+
+[INFO] Docusaurus version: 3.9.2
+Node version: v20.19.4
+[ERROR] Error: Unable to build website for locale en.
+    at tryToBuildLocale (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:83:15)
+    at async C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:35:9
+    ... 4 lines matching cause stack trace ...
+    at async file:///C:/Users/wes/Desktop/glassbox_crud_api/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+  [cause]: Error: Docusaurus static site generation failed for 1 paths:
+  - "/docs/client_intake_docs"
+      at throwSSGError (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgGlobalResult.js:56:11)
+      at createGlobalSSGResult (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgGlobalResult.js:66:9)
+      ... 11 lines matching cause stack trace ...
+      at async file:///C:/Users/wes/Desktop/glassbox_crud_api/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+    [cause]: AggregateError
+        at throwSSGError (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgGlobalResult.js:57:16)
+        at createGlobalSSGResult (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgGlobalResult.js:66:9)
+        at C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgExecutor.js:30:68
+        at async executeSSG (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgExecutor.js:144:20)
+        at async buildLocale (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\buildLocale.js:84:31)
+        at async runBuildLocaleTask (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:98:5)
+        at async C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:79:13
+        at async tryToBuildLocale (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:75:9)
+        at async C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:35:9
+        at async mapAsyncSequential (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\utils\lib\jsUtils.js:21:24)
+        at async Command.build (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\build\build.js:34:5)
+        at async Promise.all (index 0)
+        at async runCLI (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\commands\cli.js:56:5)
+        at async file:///C:/Users/wes/Desktop/glassbox_crud_api/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+      [errors]: [
+        Error: Can't render static file for pathname "/docs/client_intake_docs"
+            at generateStaticFile (C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\@docusaurus\core\lib\ssg\ssgRenderer.js:131:20)
+            at async C:\Users\wes\Desktop\glassbox_crud_api\docs-site\node_modules\p-map\index.js:57:22 {
+          [cause]: ReferenceError: target is not defined
+              at _createMdxContent (server.bundle.js:9230:22)
+              at MDXContent (server.bundle.js:10246:8)
+              at renderWithHooks (server.bundle.js:32017:18)
+              at renderElement (server.bundle.js:32155:14)
+              at retryNode (server.bundle.js:32873:16)
+              at renderNodeDestructive (server.bundle.js:32667:7)
+              at renderElement (server.bundle.js:32600:11)
+              at retryNode (server.bundle.js:32873:16)
+              at renderNodeDestructive (server.bundle.js:32667:7)
+              at finishFunctionComponent (server.bundle.js:32058:9)
+        }
+      ]
+    }
+  }
+}

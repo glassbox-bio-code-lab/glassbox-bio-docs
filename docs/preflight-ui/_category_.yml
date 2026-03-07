@@ -1,0 +1,13 @@
+label: PreFlight UI
+position: 4
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: PreFlight UI
+  description: Input validation, submission readiness, and pre-analysis workflow guidance.
+  slug: /preflight-ui
+  keywords:
+    - validation
+    - readiness
+    - submission

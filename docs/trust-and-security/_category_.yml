@@ -1,0 +1,13 @@
+label: Trust & Security
+position: 8
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Trust & Security
+  description: Security model, provenance, auditability, and customer data boundaries.
+  slug: /trust-and-security
+  keywords:
+    - security
+    - provenance
+    - auditability

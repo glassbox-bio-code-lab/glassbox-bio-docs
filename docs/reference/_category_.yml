@@ -1,0 +1,13 @@
+label: Reference
+position: 7
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Reference
+  description: API, CLI, config, schema, and file-format reference material.
+  slug: /reference
+  keywords:
+    - api
+    - cli
+    - schema

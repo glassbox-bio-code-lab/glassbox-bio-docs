@@ -1,0 +1,12 @@
+label: IP/FTO
+position: 10
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: IP/FTO
+  description: IP and freedom-to-operate documentation for the add-on module.
+  slug: /add-ons/ip-fto
+  keywords:
+    - ip
+    - fto

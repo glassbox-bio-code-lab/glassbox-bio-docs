@@ -1,0 +1,11 @@
+label: Modules
+position: 30
+collapsed: false
+collapsible: true
+link:
+  type: generated-index
+  title: Modules
+  description: Module families and how their outputs roll up into the core product.
+  slug: /computational-safety-diligence/modules
+  keywords:
+    - modules
