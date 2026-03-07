@@ -60,12 +60,27 @@ const config: Config = {
           }) => {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
 
-            return sidebarItems.filter(
-              (item) =>
-                !(
-                  item.type === "doc" &&
-                  (item.id === "index" || item.id === "intro")
-                ),
+            const collapseCategories = (items: typeof sidebarItems) =>
+              items.map((item) => {
+                if (item.type !== "category") {
+                  return item;
+                }
+
+                return {
+                  ...item,
+                  collapsed: true,
+                  items: collapseCategories(item.items),
+                };
+              });
+
+            return collapseCategories(
+              sidebarItems.filter(
+                (item) =>
+                  !(
+                    item.type === "doc" &&
+                    (item.id === "index" || item.id === "intro")
+                  ),
+              ),
             );
           },
           editUrl: ({ docPath }) =>
