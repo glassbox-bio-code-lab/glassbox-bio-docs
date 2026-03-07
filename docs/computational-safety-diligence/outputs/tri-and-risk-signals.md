@@ -8,14 +8,42 @@ tags:
 
 # TRI and Risk Signals
 
-## Cover
+CB-TRI is the top-line computational risk index in the report package. It is designed to summarize risk signals while keeping the underlying components inspectable.
 
-- What the TRI summarizes
-- What it does not summarize
-- Which sub-signals influence it
-- How missing evidence changes interpretation
-- What action thresholds you recommend
+## What CB-TRI summarizes
 
-## Avoid
+CB-TRI should be read as an aggregate view over the current computational evidence scope. The score is intended to surface overall risk magnitude under the executed workflow, not to hide the underlying evidence channels.
 
-Do not present this as a black box score without interpretive guidance.
+## Risk channels
+
+The current framing separates risk into channels such as:
+
+- Biology
+- Chemistry
+- Safety
+- Manufacturability
+- Clinical precedent
+
+Those channels are part of the explanation layer for the score and should remain visible to the user.
+
+## What CB-TRI does not do
+
+Do not present CB-TRI as:
+
+- A deterministic go or no-go decision
+- A replacement for wet-lab policy
+- A proof of biological efficacy
+- A substitute for reviewing evidentiary gaps and coverage limitations
+
+The user still owns the investment or execution policy applied to the score.
+
+## How to interpret missing evidence
+
+Coverage and confidence context should remain separate from the risk score itself. If evidence is missing, ineligible, or weak, that should be shown explicitly rather than hidden inside a single composite number.
+
+## Recommended reading order
+
+1. Read the top-line CB-TRI value
+2. Review the underlying risk channels
+3. Check coverage, missingness, and applicability context
+4. Read the evidence-linked findings before making a decision

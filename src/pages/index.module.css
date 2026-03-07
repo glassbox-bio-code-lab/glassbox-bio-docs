@@ -14,6 +14,26 @@
   border-bottom: 1px solid #1e1e1e;
 }
 
+.homeLayout {
+  display: block;
+}
+
+.homeMain {
+  min-width: 0;
+}
+
+.homeSidebar {
+  display: none;
+}
+
+.homeSidebarViewport {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  padding-top: var(--ifm-navbar-height);
+  overflow-y: auto;
+}
+
 .heroBanner::before {
   content: '';
   position: absolute;
@@ -29,6 +49,24 @@
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 997px) {
+  .homeLayout {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .homeSidebar {
+    display: block;
+    width: 300px;
+    flex: 0 0 300px;
+    margin-top: calc(-1 * var(--ifm-navbar-height));
+  }
+
+  .homeMain {
+    flex: 1;
   }
 }
 
