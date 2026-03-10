@@ -34,7 +34,7 @@
   --ifm-background-color: var(--bg-primary);
   --ifm-background-surface-color: var(--bg-card);
   --ifm-navbar-background-color: rgba(10, 10, 10, 0.88);
-  --ifm-footer-background-color: var(--bg-secondary);
+  --ifm-footer-background-color: var(--bg-primary);
   --ifm-font-family-base: var(--font-sans);
   --ifm-font-family-monospace: var(--font-mono);
   --ifm-heading-font-family: var(--font-sans);
@@ -193,7 +193,7 @@ img {
 .section-headline {
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: -0.5px;
   color: var(--text-primary);
   margin-bottom: 16px;
@@ -392,7 +392,7 @@ img {
   > .menu__list-item-collapsible
   > .menu__link,
 .theme-doc-sidebar-item-link-level-1 > .menu__link {
-  color: var(--text-dim);
+  color: var(--text);
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 500;
@@ -407,7 +407,7 @@ img {
 .theme-doc-sidebar-item-link-level-2 > .menu__link,
 .theme-doc-sidebar-item-link-level-3 > .menu__link,
 .theme-doc-sidebar-item-link-level-4 > .menu__link {
-  color: var(--text-secondary);
+  color: var(--text);
   font-family: var(--font-sans);
   font-size: 0.82rem;
   letter-spacing: 0;
