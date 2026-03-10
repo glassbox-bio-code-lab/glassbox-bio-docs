@@ -8,9 +8,9 @@
   --bg-card-hover: #1c1c1c;
   --bg-elevated: #1a1a1a;
   --text-primary: #ffffff;
-  --text-secondary: #c4c4c4;
+  --text-secondary: #d4d4d4;
   --text-muted: #e6e6e6;
-  --text-dim: #9e9e9e;
+  --text-dim: #b0b0b0;
   --accent-blue: #2597cf;
   --accent-green: #34d399;
   --accent-red: #ef4444;
@@ -50,7 +50,7 @@
   --ifm-breadcrumb-color-active: var(--text-primary);
   --ifm-pagination-color: var(--text-primary);
   --ifm-card-background-color: var(--bg-card);
-  --ifm-card-border-radius: 0.2rem;
+  --ifm-card-border-radius: 12px;
   --ifm-global-radius: 8px;
   --ifm-table-background: transparent;
   --ifm-table-stripe-background: rgba(255, 255, 255, 0.015);
@@ -473,7 +473,7 @@ img {
   min-height: 34px;
   padding: 0.4rem 0.85rem;
   border: 1px solid var(--border-color);
-  border-radius: 0.2rem;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
   color: var(--text-secondary);
 }
@@ -482,7 +482,7 @@ img {
   color: var(--text-primary);
   border-color: var(--border-light);
   background: var(--bg-card);
-  border-radius: 0.2rem;
+  border-radius: 8px;
 }
 
 .footer {
@@ -705,10 +705,22 @@ blockquote {
   scroll-margin-top: 90px;
 }
 
+/* Generated index page (category landing pages) */
+[class*="generatedIndexPage"] header {
+  margin-bottom: 2rem;
+}
+
+[class*="generatedIndexPage"] header p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
 [class*="generatedIndexPage"] > article > .row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 [class*="generatedIndexPage"]
@@ -719,16 +731,41 @@ blockquote {
   max-width: 100%;
 }
 
-.docCardListItem_W1sv {
+/* Doc card styling — uses attribute selector to avoid fragile hashed classes */
+article[class*="docCardListItem"] {
   border-radius: 12px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  gap: 1.25rem;
+  padding: 0.25rem;
   transition:
-    color 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+article[class*="docCardListItem"]:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+}
+
+article[class*="docCardListItem"] .card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+article[class*="docCardListItem"] .card__header h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+article[class*="docCardListItem"] .card__body {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 996px) {
