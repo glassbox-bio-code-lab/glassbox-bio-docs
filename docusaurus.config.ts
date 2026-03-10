@@ -28,8 +28,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "ai-wes",
-  projectName: "glassbox_crud_api",
+  organizationName: "glassbox-bio-code-lab",
+  projectName: "glassbox_docs_site",
 
   onBrokenLinks: "warn",
   markdown: {
@@ -83,8 +83,7 @@ const config: Config = {
               ),
             );
           },
-          editUrl: ({ docPath }) =>
-            `https://github.com/ai-wes/glassbox_crud_api/tree/main/docs/${docPath}`,
+          editUrl: ({ docPath }) => `https://github.com/glassbox-bio-code-lab`,
         },
         blog: false,
         theme: {
@@ -126,7 +125,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/ai-wes/glassbox_crud_api",
+          href: "https://github.com/glassbox-bio-code-lab",
           label: "GitHub",
           position: "right",
         },
@@ -163,7 +162,7 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/ai-wes/glassbox_crud_api",
+              href: "https://github.com/glassbox-bio-code-lab",
             },
           ],
         },

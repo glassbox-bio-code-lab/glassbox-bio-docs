@@ -22,7 +22,7 @@
     "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "IBM Plex Serif", Georgia, serif;
   --max-width: 1200px;
-  --ifm-navbar-height: 72px;
+  --ifm-navbar-height: 64px;
 
   --ifm-color-primary: #2597cf;
   --ifm-color-primary-dark: #1d86b8;
@@ -50,7 +50,7 @@
   --ifm-breadcrumb-color-active: var(--text-primary);
   --ifm-pagination-color: var(--text-primary);
   --ifm-card-background-color: var(--bg-card);
-  --ifm-card-border-radius: 12px;
+  --ifm-card-border-radius: 10px;
   --ifm-global-radius: 8px;
   --ifm-table-background: transparent;
   --ifm-table-stripe-background: rgba(255, 255, 255, 0.015);
@@ -78,7 +78,7 @@
 }
 
 html {
-  font-size: 0.9rem;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
@@ -120,7 +120,7 @@ img {
   }
 }
 
-/* Shared button styles */
+/* ===== BUTTONS — unified sizing ===== */
 .btn-primary,
 .btn-outline,
 .btn-ghost {
@@ -129,21 +129,21 @@ img {
   justify-content: center;
   width: fit-content;
   text-decoration: none;
-}
-
-.btn-primary {
-  gap: 8px;
-  padding: 1rem 1.75rem;
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border: 1px solid var(--text-primary);
-  border-radius: 4px;
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.25s ease;
+}
+
+.btn-primary {
+  gap: 8px;
+  padding: 0.7rem 1.4rem;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border: 1px solid var(--text-primary);
+  border-radius: 6px;
 }
 
 .btn-primary:hover {
@@ -153,17 +153,11 @@ img {
 
 .btn-outline {
   gap: 8px;
-  padding: 1rem 1.75rem;
+  padding: 0.7rem 1.4rem;
   background: transparent;
   color: var(--text-primary);
   border: 1px solid var(--border-light);
-  border-radius: 4px;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.25s ease;
+  border-radius: 6px;
 }
 
 .btn-outline:hover {
@@ -173,42 +167,40 @@ img {
 
 .btn-ghost {
   gap: 6px;
+  padding: 0.7rem 1.4rem;
   background: none;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
   color: var(--text-secondary);
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: color 0.2s ease;
 }
 
 .btn-ghost:hover {
   color: var(--text-primary);
+  border-color: var(--border-light);
 }
 
 /* Section helpers */
 .section-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 16px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
 }
 
 .section-headline {
-  font-size: 1.875rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.5px;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .section-subline {
-  font-size: 1.0625rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   color: var(--text-secondary);
   max-width: 640px;
@@ -223,6 +215,7 @@ img {
   overflow: hidden;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border-color);
@@ -237,7 +230,7 @@ img {
 .navbar__brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-right: 1.5rem;
   padding: 0.4rem 0;
   border: 0;
@@ -254,7 +247,7 @@ img {
 
 .navbar__logo img {
   width: auto;
-  height: 46px;
+  height: 36px;
   max-width: none;
 }
 
@@ -263,7 +256,7 @@ img {
   align-items: center;
   gap: 0;
   font-family: var(--font-mono);
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -275,14 +268,16 @@ img {
   content: none;
 }
 
+/* Navbar links — match button sizing */
 .navbar__items--right .navbar__item.navbar__link,
 .navbar__items--left .navbar__item.navbar__link {
   display: inline-flex;
   align-items: center;
   min-height: 1rem;
-  padding: 0.7rem 0.95rem;
+  padding: 0.5rem 0.85rem;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 6px;
+  font-size: 0.8rem;
   transition:
     color 0.2s ease,
     border-color 0.2s ease,
@@ -291,7 +286,7 @@ img {
 }
 
 .navbar__items--right {
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .navbar__items--right .navbar__item.navbar__link {
@@ -309,6 +304,7 @@ img {
   background: rgba(10, 10, 10, 0.98);
 }
 
+/* ===== SHARED FONT FAMILIES ===== */
 .navbar__title,
 .navbar__link,
 .footer__link-item,
@@ -340,8 +336,9 @@ img {
   color: var(--text-primary);
 }
 
+/* ===== LEFT SIDEBAR ===== */
 .menu {
-  font-size: 0.92rem;
+  font-size: 0.82rem;
 }
 
 .theme-doc-sidebar-container {
@@ -352,18 +349,18 @@ img {
 }
 
 .theme-doc-sidebar-menu {
-  padding: 1.25rem 1.1rem 2.5rem;
+  padding: 1rem 0.9rem 2rem;
 }
 
 .theme-doc-sidebar-menu::before {
   content: "Documentation Index";
   display: block;
-  margin: 0 0.5rem 1.25rem;
-  padding-bottom: 1rem;
+  margin: 0 0.4rem 1rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border-color);
-  color: var(--text-muted);
+  color: var(--text-dim);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 2.4px;
   text-transform: uppercase;
@@ -371,7 +368,7 @@ img {
 
 .menu__link {
   border-radius: 6px;
-  padding: 0.5rem 0.75rem;
+  padding: 0.35rem 0.6rem;
 }
 
 .menu__list-item-collapsible,
@@ -384,24 +381,26 @@ img {
     transform 0.2s ease;
 }
 
+/* Level-1 sidebar categories (top-level sections) */
 .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible,
 .theme-doc-sidebar-item-link-level-1 > .menu__link {
-  margin-top: 0.8rem;
-  border-radius: 10px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
 }
 
 .theme-doc-sidebar-item-category-level-1
   > .menu__list-item-collapsible
   > .menu__link,
 .theme-doc-sidebar-item-link-level-1 > .menu__link {
-  color: var(--text-muted);
+  color: var(--text-dim);
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
 }
 
+/* Level-2+ sidebar links */
 .theme-doc-sidebar-item-category-level-2
   > .menu__list-item-collapsible
   > .menu__link,
@@ -410,14 +409,14 @@ img {
 .theme-doc-sidebar-item-link-level-4 > .menu__link {
   color: var(--text-secondary);
   font-family: var(--font-sans);
-  font-size: 0.94rem;
+  font-size: 0.82rem;
   letter-spacing: 0;
   text-transform: none;
 }
 
 .menu__list .menu__list {
-  margin: 0.5rem 0 0.75rem 0.75rem;
-  padding-left: 0.9rem;
+  margin: 0.35rem 0 0.5rem 0.6rem;
+  padding-left: 0.75rem;
   border-left: 1px solid var(--border-color);
 }
 
@@ -448,18 +447,20 @@ img {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
+/* ===== PAGINATION ===== */
 .pagination-nav {
   margin-top: 2rem;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .pagination-nav__link {
   border-radius: 10px;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
 }
 
+/* ===== BREADCRUMBS ===== */
 .breadcrumbs {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .breadcrumbs__item {
@@ -470,21 +471,23 @@ img {
 .breadcrumbs__link {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 0.4rem 0.85rem;
+  min-height: 30px;
+  padding: 0.3rem 0.7rem;
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.02);
   color: var(--text-secondary);
+  font-size: 0.8rem;
 }
 
 .breadcrumbs__item--active .breadcrumbs__link {
   color: var(--text-primary);
   border-color: var(--border-light);
   background: var(--bg-card);
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
+/* ===== FOOTER ===== */
 .footer {
   border-top: 1px solid var(--border-color);
   padding: 3rem 0;
@@ -493,11 +496,12 @@ img {
 .footer__title {
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+/* ===== MAIN CONTENT ===== */
 .hero,
 .main-wrapper {
   background: var(--bg-primary);
@@ -505,23 +509,23 @@ img {
 
 .main-wrapper .container {
   max-width: calc(var(--max-width) + 80px);
-  padding: 5rem;
+  padding: 3rem 3.5rem;
 }
 
 /* Extra breathing room for the doc page layout */
 .docMainContainer_node_modules,
 [class*="docMainContainer"] {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .theme-doc-markdown {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .theme-doc-markdown p,
 .theme-doc-markdown ul,
 .theme-doc-markdown ol {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
   line-height: 1.75;
 }
 
@@ -529,47 +533,51 @@ img {
   margin-left: 2rem;
 }
 .theme-doc-markdown li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .theme-doc-markdown h3 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.theme-doc-markdown h4 {
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
+.theme-doc-markdown h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== RIGHT SIDEBAR (TOC) — scaled to match left sidebar ===== */
 .theme-doc-toc-desktop {
-  padding-top: 1rem;
+  padding-top: 0.75rem;
 }
 
 .table-of-contents {
   position: sticky;
-  top: calc(var(--ifm-navbar-height) + 1.5rem);
-  padding: 1.25rem 1.1rem;
-  border-radius: 14px;
+  top: calc(var(--ifm-navbar-height) + 1rem);
+  padding: 1rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
 }
 
 .table-of-contents__link {
-  padding: 0.35rem 0;
+  padding: 0.25rem 0;
   display: block;
+  font-size: 0.8rem;
 }
 
 .table-of-contents::before {
   content: "On this page";
   display: block;
-  margin-bottom: 1rem;
-  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  color: var(--text-dim);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
+/* ===== DOC MARKDOWN ===== */
 .theme-doc-markdown,
 .theme-blog-markdown {
   color: var(--text-secondary);
@@ -585,25 +593,35 @@ img {
   letter-spacing: -0.02em;
 }
 
+/* Page title — toned down from 2.8rem */
 .theme-doc-markdown h1 {
-  font-size: 2.8rem;
+  font-size: 2rem;
 }
 
 .theme-doc-markdown > header {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border-color);
 }
 
 .theme-doc-markdown > header h1 {
-  max-width: 12ch;
-  line-height: 1;
+  max-width: 16ch;
+  line-height: 1.15;
 }
 
 .theme-doc-markdown h2 {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--border-color);
+}
+
+.theme-doc-markdown h3 {
+  font-size: 1.15rem;
+}
+
+.theme-doc-markdown h4 {
+  font-size: 1rem;
 }
 
 .theme-doc-markdown a {
@@ -637,15 +655,15 @@ pre,
 .theme-code-block,
 .prism-code {
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 pre {
-  padding: 1.25rem 1.5rem;
+  padding: 1.1rem 1.25rem;
 }
 
 .theme-code-block {
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
 }
 
 table {
@@ -655,13 +673,14 @@ table {
 table th,
 table td {
   border-color: var(--border-light);
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.9rem;
 }
 
 table th {
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   background: var(--bg-elevated);
@@ -673,16 +692,16 @@ blockquote {
   border: 1px solid var(--border-color);
   border-left: 1px solid var(--accent-blue);
   border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
 }
 
 .theme-admonition {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   box-shadow: none;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
 }
 
 .clean-btn {
@@ -694,25 +713,29 @@ blockquote {
 }
 
 .theme-doc-footer {
-  margin-top: 4rem;
-  padding-top: 2rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border-color);
 }
 
 .markdown > h2,
 .markdown > h3,
 .markdown > h4 {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 80px;
 }
 
-/* Generated index page (category landing pages) */
+/* ===== GENERATED INDEX PAGES (category landing) ===== */
 [class*="generatedIndexPage"] header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+[class*="generatedIndexPage"] header h1 {
+  font-size: 2rem;
 }
 
 [class*="generatedIndexPage"] header p {
   color: var(--text-secondary);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   max-width: 680px;
 }
@@ -720,7 +743,7 @@ blockquote {
 [class*="generatedIndexPage"] > article > .row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 [class*="generatedIndexPage"]
@@ -731,12 +754,12 @@ blockquote {
   max-width: 100%;
 }
 
-/* Doc card styling — uses attribute selector to avoid fragile hashed classes */
+/* Doc card styling — attribute selector for stability */
 article[class*="docCardListItem"] {
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 0.25rem;
+  padding: 0;
   transition:
     border-color 0.25s ease,
     background 0.25s ease,
@@ -753,18 +776,18 @@ article[class*="docCardListItem"] .card {
   background: transparent;
   border: none;
   box-shadow: none;
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
 }
 
 article[class*="docCardListItem"] .card__header h2 {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 500;
 }
 
 article[class*="docCardListItem"] .card__body {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.6;
 }
 
@@ -778,11 +801,11 @@ article[class*="docCardListItem"] .card__body {
   }
 
   .navbar__logo img {
-    height: 38px;
+    height: 30px;
   }
 
   .navbar__title {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.16em;
   }
 
@@ -791,7 +814,11 @@ article[class*="docCardListItem"] .card__body {
   }
 
   .theme-doc-sidebar-menu {
-    padding: 1rem 0.8rem 2rem;
+    padding: 0.75rem 0.6rem 1.5rem;
+  }
+
+  .main-wrapper .container {
+    padding: 2rem 1.5rem;
   }
 
   [class*="generatedIndexPage"] > article > .row {
