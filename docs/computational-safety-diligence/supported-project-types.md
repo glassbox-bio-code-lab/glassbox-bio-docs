@@ -8,7 +8,9 @@ tags:
 
 # Supported Project Types
 
-Use this page to explain which input categories the core workflow can route today and how those categories affect module eligibility.
+Use this page to explain which project categories the core workflow can route today and how those categories affect module eligibility.
+
+For the full category policy, routing rules, and category-specific module gating taken from `CATEGORIES.txt`, see [Category Policy and Routing](./category-policy-and-routing.md).
 
 ## Current category policy
 
@@ -69,6 +71,20 @@ Use this path when sufficient labeled activity data exists to support validation
 - Assay-aware validation modules become relevant
 - Several structure-heavy physics modules can still remain disabled if the assay-led path is the primary framing
 
+## Category selection is evidence-driven
+
+The pipeline does not select category based on operator preference alone. It resolves `category_id` from the actual staged package and the module-planning policy.
+
+In practice, the most important category-driving signals are:
+
+- whether the submission is ligand-only
+- whether receptor structure is present
+- whether trajectory-backed analysis is intended
+- whether the package is physics-audit eligible
+- whether labeled assay data is present
+
+Those decisions are separate from `standard` versus `deep` execution mode. Run mode affects depth and infrastructure; category affects scientific routing.
+
 ## Canonical module baseline
 
 The current policy also documents a canonical baseline set across the 40-module framing:
@@ -86,4 +102,4 @@ This page helps users answer two questions early:
 1. Is my project category actually supported by the current workflow
 2. Which module families should I expect to run, remain optional, or stay disabled
 
-For the module-family view, see [Module Index](./modules/module-index.md).
+For the module-family view, see [Module Index](./modules/module-index.md). For the detailed policy source, see [Category Policy and Routing](./category-policy-and-routing.md).

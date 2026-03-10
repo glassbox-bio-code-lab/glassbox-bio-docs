@@ -1,0 +1,314 @@
+{
+  "version": "glassbox_category_module_policy_v1",
+  "canonical_modules_40": {
+    "run": [
+      "clinical_precedent_prior",
+      "target_biology_risk",
+      "kinase_drug_likeness",
+      "cns_penetration",
+      "uncertainty_quantification",
+      "toxicity_profile",
+      "cyp_assessment",
+      "gcn_toxicity",
+      "pbpk_sensitivity",
+      "admet_predictions",
+      "mcts_optimization",
+      "causal_discovery",
+      "mechanistic_extensions",
+      "manufacturability_audit",
+      "metabolite_prediction",
+      "offtarget_screening",
+      "solubility_assessment",
+      "virtual_panels",
+      "synthesis_audit",
+      "mechanistic_pathway_influence",
+      "mechanistic_qc",
+      "mechanistic_generic",
+      "mechanistic_pathway_engine",
+      "mechanistic_pkpd_engine",
+      "wetlab_priority_and_readiness_determiner"
+    ],
+    "skipped": [
+      "physics_binding",
+      "molecular_docking",
+      "molecular_dynamics",
+      "y_scramble_validation",
+      "solvation_thermodynamics",
+      "dynamics_nma",
+      "interaction_stability",
+      "cryptic_pockets",
+      "solvent_mapping",
+      "binding_kinetics",
+      "msm_analysis",
+      "qmmm_analysis",
+      "quantum_target_audit",
+      "advanced_comp_chem_summary"
+    ],
+    "failed": [
+      "physics_audit"
+    ]
+  },
+  "categories": [
+    {
+      "category_id": "SMALL_MOLECULE__LIGAND_ONLY__NO_STRUCTURE__NO_ASSAYS",
+      "intent": "FastFail triage when you only have SMILES and target symbol, no PDB/model, no labeled assay table.",
+      "modules": {
+        "REQUIRED": [
+          "molecular_logic",
+          "clinical_precedent_prior",
+          "target_biology_risk",
+          "kinase_drug_likeness",
+          "solubility_assessment",
+          "admet_predictions",
+          "cyp_assessment",
+          "toxicity_profile",
+          "gcn_toxicity",
+          "metabolite_prediction",
+          "manufacturability_audit",
+          "synthesis_audit",
+          "uncertainty_quantification",
+          "wetlab_priority_and_readiness_determiner"
+        ],
+        "OPTIONAL": [
+          "offtarget_screening",
+          "virtual_panels",
+          "pbpk_sensitivity",
+          "causal_discovery",
+          "mcts_optimization",
+          "quantum_target_audit",
+          "mechanistic_generic",
+          "mechanistic_qc",
+          "mechanistic_pathway_engine",
+          "mechanistic_pathway_influence",
+          "mechanistic_pkpd_engine",
+          "mechanistic_extensions",
+          "sar_explorer",
+          "proteomics_validation"
+        ],
+        "EXPLORATORY": [
+          "clinical_forecasting"
+        ],
+        "DISABLED": [
+          "molecular_docking",
+          "molecular_dynamics",
+          "physics_binding",
+          "physics_audit",
+          "solvation_thermodynamics",
+          "dynamics_nma",
+          "cryptic_pockets",
+          "solvent_mapping",
+          "binding_kinetics",
+          "interaction_stability",
+          "msm_analysis",
+          "qmmm_analysis",
+          "advanced_comp_chem_summary",
+          "y_scramble_validation"
+        ]
+      }
+    },
+    {
+      "category_id": "SMALL_MOLECULE__STRUCTURE_PRESENT__NO_MD_TRAJ",
+      "intent": "You have receptor structure (PDB/co-crystal or model) and can dock, but you are not running MD/trajectory-dependent analyses yet.",
+      "modules": {
+        "REQUIRED": [
+          "molecular_logic",
+          "clinical_precedent_prior",
+          "target_biology_risk",
+          "molecular_docking",
+          "kinase_drug_likeness",
+          "solubility_assessment",
+          "admet_predictions",
+          "cyp_assessment",
+          "toxicity_profile",
+          "gcn_toxicity",
+          "metabolite_prediction",
+          "manufacturability_audit",
+          "synthesis_audit",
+          "uncertainty_quantification",
+          "wetlab_priority_and_readiness_determiner"
+        ],
+        "OPTIONAL": [
+          "dynamics_nma",
+          "offtarget_screening",
+          "virtual_panels",
+          "pbpk_sensitivity",
+          "qmmm_analysis",
+          "quantum_target_audit",
+          "mechanistic_generic",
+          "mechanistic_qc",
+          "mechanistic_pathway_engine",
+          "mechanistic_pathway_influence",
+          "mechanistic_pkpd_engine",
+          "mechanistic_extensions",
+          "sar_explorer",
+          "proteomics_validation"
+        ],
+        "EXPLORATORY": [
+          "advanced_comp_chem_summary",
+          "clinical_forecasting"
+        ],
+        "DISABLED": [
+          "molecular_dynamics",
+          "binding_kinetics",
+          "interaction_stability",
+          "msm_analysis",
+          "physics_binding",
+          "physics_audit",
+          "y_scramble_validation"
+        ]
+      }
+    },
+    {
+      "category_id": "SMALL_MOLECULE__STRUCTURE_PRESENT__MD_ENABLED",
+      "intent": "You have structure and deep structural-dynamics analyses are eligible from runtime-generated or provided trajectories.",
+      "modules": {
+        "REQUIRED": [
+          "molecular_logic",
+          "clinical_precedent_prior",
+          "target_biology_risk",
+          "molecular_docking",
+          "dynamics_nma",
+          "kinase_drug_likeness",
+          "solubility_assessment",
+          "admet_predictions",
+          "cyp_assessment",
+          "toxicity_profile",
+          "gcn_toxicity",
+          "metabolite_prediction",
+          "manufacturability_audit",
+          "synthesis_audit",
+          "uncertainty_quantification",
+          "wetlab_priority_and_readiness_determiner"
+        ],
+        "OPTIONAL": [
+          "msm_analysis",
+          "interaction_stability",
+          "cryptic_pockets",
+          "solvation_thermodynamics",
+          "solvent_mapping",
+          "offtarget_screening",
+          "virtual_panels",
+          "pbpk_sensitivity",
+          "physics_binding",
+          "qmmm_analysis",
+          "advanced_comp_chem_summary",
+          "quantum_target_audit",
+          "mechanistic_generic",
+          "mechanistic_qc",
+          "mechanistic_pathway_engine",
+          "mechanistic_pathway_influence",
+          "mechanistic_pkpd_engine",
+          "mechanistic_extensions",
+          "sar_explorer",
+          "proteomics_validation"
+        ],
+        "EXPLORATORY": [
+          "clinical_forecasting"
+        ],
+        "DISABLED": [
+          "binding_kinetics",
+          "molecular_dynamics",
+          "physics_audit",
+          "y_scramble_validation"
+        ]
+      }
+    },
+    {
+      "category_id": "SMALL_MOLECULE__STRUCTURE_PRESENT__PHYSICS_AUDIT_ELIGIBLE",
+      "intent": "Enable quantum/physics audit only when ligand prep passes single-fragment and other safety constraints (preflight).",
+      "modules": {
+        "REQUIRED": [
+          "molecular_logic",
+          "clinical_precedent_prior",
+          "target_biology_risk",
+          "kinase_drug_likeness",
+          "solubility_assessment",
+          "admet_predictions",
+          "cyp_assessment",
+          "toxicity_profile",
+          "gcn_toxicity",
+          "metabolite_prediction",
+          "manufacturability_audit",
+          "synthesis_audit",
+          "uncertainty_quantification",
+          "wetlab_priority_and_readiness_determiner"
+        ],
+        "OPTIONAL": [
+          "physics_audit",
+          "qmmm_analysis",
+          "quantum_target_audit",
+          "advanced_comp_chem_summary",
+          "molecular_docking",
+          "physics_binding",
+          "interaction_stability",
+          "dynamics_nma",
+          "sar_explorer",
+          "proteomics_validation"
+        ],
+        "EXPLORATORY": [],
+        "DISABLED": [
+          "molecular_dynamics",
+          "msm_analysis",
+          "binding_kinetics",
+          "y_scramble_validation",
+          "cryptic_pockets"
+        ]
+      }
+    },
+    {
+      "category_id": "SMALL_MOLECULE__HAS_LABELED_ASSAYS",
+      "intent": "You have enough labeled activity data to validate / calibrate (includes y-scramble).",
+      "modules": {
+        "REQUIRED": [
+          "molecular_logic",
+          "clinical_precedent_prior",
+          "target_biology_risk",
+          "kinase_drug_likeness",
+          "solubility_assessment",
+          "admet_predictions",
+          "cyp_assessment",
+          "toxicity_profile",
+          "gcn_toxicity",
+          "metabolite_prediction",
+          "manufacturability_audit",
+          "synthesis_audit",
+          "uncertainty_quantification",
+          "y_scramble_validation",
+          "wetlab_priority_and_readiness_determiner"
+        ],
+        "OPTIONAL": [
+          "causal_discovery",
+          "mcts_optimization",
+          "virtual_panels",
+          "offtarget_screening",
+          "pbpk_sensitivity",
+          "clinical_forecasting",
+          "mechanistic_generic",
+          "mechanistic_qc",
+          "mechanistic_pathway_engine",
+          "mechanistic_pathway_influence",
+          "mechanistic_pkpd_engine",
+          "mechanistic_extensions",
+          "sar_explorer",
+          "proteomics_validation"
+        ],
+        "EXPLORATORY": [],
+        "DISABLED": [
+          "molecular_docking",
+          "molecular_dynamics",
+          "physics_binding",
+          "physics_audit",
+          "solvation_thermodynamics",
+          "dynamics_nma",
+          "cryptic_pockets",
+          "solvent_mapping",
+          "binding_kinetics",
+          "interaction_stability",
+          "msm_analysis",
+          "qmmm_analysis",
+          "advanced_comp_chem_summary"
+        ]
+      }
+    }
+  ]
+}

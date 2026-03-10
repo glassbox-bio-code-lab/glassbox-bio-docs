@@ -9,4 +9,6 @@ tags:
 
 # IP/FTO Interpretation
 
-State clearly what users can conclude, what they cannot conclude, and what conditions require escalation or legal review.
+Coming soon.
+
+This page will state what users can conclude, what they cannot conclude, and when legal or expert escalation is required.

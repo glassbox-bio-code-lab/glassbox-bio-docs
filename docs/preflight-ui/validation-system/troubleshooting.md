@@ -56,6 +56,8 @@ Missing optional files such as `assays.csv`, `compounds.csv`, `targets.csv`, or 
 - Explain which downstream analyses may have reduced coverage
 - Let the user decide whether the run is still useful
 
+If the missing file changes category routing, say that explicitly. For example, a missing structure file is not just "less detail" when the user expects a structure-backed category. See [Category Policy and Routing](../../computational-safety-diligence/category-policy-and-routing.md).
+
 ## Handoff succeeds but runtime later fails
 
 If the package validated in PreFlight UI but the job still fails later, compare the staged inputs with the effective runtime settings:
@@ -66,6 +68,8 @@ If the package validated in PreFlight UI but the job still fails later, compare 
 - File permissions on the staged directory
 
 This is usually a deployment mismatch rather than a schema mismatch.
+
+It can also be a category mismatch. `config.runMode` may be correct while the staged package still resolves into a different scientific route than the user expected.
 
 ## Permission issues on staged PVC data
 

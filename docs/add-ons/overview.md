@@ -8,13 +8,6 @@ tags:
 
 # Overview
 
-Add-Ons are optional, customer-facing product extensions.
+Coming soon.
 
-## Distinction to keep clean
-
-- **Core modules** live inside Computational Safety Diligence.
-- **Add-Ons** are optional products or feature packages users enable intentionally.
-
-## Documentation rule
-
-Every add-on gets its own folder and its own bounded workflow documentation.
+Add-Ons are optional, customer-facing product extensions. This section will be expanded after the core pipeline and deployment documentation are complete.

@@ -38,6 +38,8 @@ The current supported profiles are:
 
 Standard runs use the default image tag and `config.runMode=standard`. Deep runs use a GPU-tagged image and `config.runMode=deep`.
 
+Run profile is not the same thing as category routing. `config.runMode` controls infrastructure depth and execution profile, while the staged inputs and policy determine the resolved `category_id`. Review [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md) before assuming that a Deep deployment implies a structure-backed or physics-heavy analysis path.
+
 ## Recommended install flow
 
 ### 1. Set the core variables
@@ -99,6 +101,7 @@ On the default PVC layout, that is usually:
 ```
 
 For the input contract, see [Prepare Inputs](../computational-safety-diligence/prepare-inputs.md).
+For the module-routing policy driven by those inputs, see [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md).
 
 ### 5. Enable the job
 

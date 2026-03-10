@@ -44,6 +44,8 @@ Treat these conditions as `Warning` rather than `Blocked` unless a selected work
 - Recommended identifier columns such as `candidate_id` or `compound_id` are absent
 - Extra files are present but unreferenced by `sources.json`
 - Input provenance is incomplete enough to reduce interpretability without breaking the run
+- The staged package appears inconsistent with the intended category route, such as expecting a structure-backed workflow without any usable structure files
+- The package is technically runnable but too thin to justify the module families implied by the intended category
 
 ## Readiness versus eligibility
 
@@ -53,6 +55,18 @@ Keep these two ideas separate:
 - Readiness answers whether the package is strong enough to produce useful downstream outputs
 
 A package can be technically eligible but still deserve warnings because evidence depth, identifiers, or optional files are weak.
+
+## Category-policy checks
+
+Validation should explicitly distinguish packaging validity from category validity.
+
+Examples:
+
+- If labeled assay data is absent, the UI should not present the package as assay-routed without warning.
+- If no receptor structure is staged, the UI should not imply that docking or other structure-backed modules will become required.
+- If physics-audit-eligible paths are exposed in the UI, the underlying admissibility constraints should be checked before the package is presented as ready for that route.
+
+Those checks should be explained with a link to [Category Policy and Routing](../../computational-safety-diligence/category-policy-and-routing.md).
 
 ## Rules that should be surfaced in the UI
 

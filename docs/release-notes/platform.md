@@ -1,5 +1,5 @@
 ---
-title: Platform
+title: INC-Platform
 description: Cross-platform releases affecting multiple surfaces at once.
 sidebar_position: 2
 tags:

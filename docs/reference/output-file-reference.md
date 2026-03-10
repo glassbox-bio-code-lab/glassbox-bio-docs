@@ -20,19 +20,31 @@ Use this page as the canonical map of the files a completed run can emit.
 
 | Path or pattern | Purpose | Notes |
 | --- | --- | --- |
+| `run_manifest.json` | Run metadata and configuration snapshot | Core audit artifact at the root of the bundle |
+| `plans/*_module_plan.json` | Module planning, category resolution, and tier compliance | Key run-planning artifact |
+| `inputs/input_hashes.json` | Per-input hash manifest | Input integrity artifact |
+| `raw/*_raw.json` | Module-native outputs | Includes status, result, metadata, and evidence linkage |
 | `results/summary.json` | High-level run summary | Good first machine-readable checkpoint |
 | `results/metrics.json` | Structured metrics output | Intended for automation and downstream processing |
 | `results/*.html` | Human-readable report package | Exact filenames can vary by release |
-| `run_manifest.json` | Run metadata and configuration snapshot | Core audit artifact |
+| `results/context_of_use.json` | Claim scope and acceptance rules | Interpretation and applicability artifact |
+| `results/evidence_state_machine.json` | Evidence-state rollup across modules | Coverage and provenance aid |
+| `results/failure_mode_ontology_output_v1.json` | Failure-mode taxonomy, actions, and TRI projection | Decision and explanation artifact |
+| `results/risk_channels_map.json` | Module-to-channel mapping | TRI and channel interpretation aid |
+| `thresholds/*.json` | Category scoring and threshold policy artifacts | Risk rollup support |
 | `preseal.json` | Metadata prepared for the sealing step | Useful for provenance review |
-| `seal/seal.json` | Machine-readable seal record | Verification artifact |
-| `seal/seal.sig` | Seal signature artifact | Verification artifact |
-| `seal/seal.svg` | Portable user-facing seal | Used in the verification portal and rerun flow |
-| `seal/VERIFY.md` | Verification instructions | Companion documentation for the seal bundle |
+| `seal/preseal.json` | Pre-seal provenance record | Example bundle currently ends at this state |
+| `seal/seal.json` | Machine-readable final seal record | Present only after final online verification succeeds |
+| `seal/seal.sig` | Seal signature artifact | Final verification artifact |
+| `seal/seal.svg` | Portable user-facing seal | Final verification artifact |
+| `seal/VERIFY.md` | Verification instructions | Companion documentation for the final seal bundle |
+| `repro_pack/manifest.json` | Rebuild manifest | Reproducibility artifact |
+| `repro_pack/environment/*.json` | Environment capture | Python, system, and binary provenance |
+| `repro_pack/container/*` | Rebuild and verification scripts | Dockerfile, run, build, and verify helpers |
 
 ## Common HTML report names
 
-Examples seen in the current customer documentation include:
+Examples seen in the example bundle include:
 
 - `results/phase5_combined_report.html`
 - `results/phase5_comprehensive_report.html`

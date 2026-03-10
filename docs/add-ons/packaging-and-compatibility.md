@@ -8,4 +8,6 @@ tags:
 
 # Packaging and Compatibility
 
-Document how add-ons are enabled, what they depend on, and which core workflows or tiers they can extend.
+Coming soon.
+
+This page will document how add-ons are enabled, what they depend on, and which core workflows or tiers they can extend.

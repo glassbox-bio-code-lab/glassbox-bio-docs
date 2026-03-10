@@ -8,21 +8,32 @@ tags:
 
 # Overview
 
-This section helps a new user understand the platform before they touch configuration, inputs, or outputs.
+This section is the orientation layer for new users. It explains where to start, which surface to use first, and how the documentation is meant to mirror the real product journey.
 
 ## What this section covers
 
-- The product surfaces that exist today
-- The order in which users typically encounter them
-- The quickest path from zero to a meaningful first run
+- The platform surfaces that matter to a first-time user
+- The recommended order of operations from staged inputs to interpreted outputs
+- The fastest route to a first successful run
+- Common first-week questions about product boundaries and workflow expectations
+
+## Who should start here
+
+Use this section if you are trying to answer one of these questions:
+
+- What is Glassbox Bio actually doing in my workflow
+- What should I read before I touch Helm or input files
+- How do I get to a meaningful first run without reading every page first
+- Which section of the docs should I use for my current task
 
 ## Recommended reading order
 
-1. Platform Overview
-2. End-to-End Workflow
-3. Quickstart
-4. FAQ
+1. [Platform Overview](./platform-overview.md)
+2. [End-to-End Workflow](./end-to-end-workflow.md)
+3. [Choose Your Surface](./choose-your-surface.md)
+4. [Quickstart](./quickstart.md)
+5. [FAQ](./faq.md)
 
-## What changes after V1
+## Important framing
 
-This structure already assumes that PreFlight UI and Add-Ons are first-class parts of the platform, not buried features of the core analysis product.
+The docs are organized around product surfaces rather than around internal implementation layers. That is deliberate. A user should be able to move from preparation to execution to interpretation without needing to know the internal service decomposition first.

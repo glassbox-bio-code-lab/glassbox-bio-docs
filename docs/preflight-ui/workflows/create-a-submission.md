@@ -32,6 +32,15 @@ A usable submission should define:
 
 Draft submissions should be allowed when the package is incomplete, but the UI should make the incomplete state obvious. A draft is useful for iterative setup. It should not be easy to mistake a draft for a validated run bundle.
 
+## Recommended submission modes
+
+The intake flow can support two equally valid UX patterns:
+
+- a guided wizard for first-time or less technical users
+- a direct form view for operators who already know the contract
+
+Both modes should collect the same core information and end in the same validation path.
+
 ## Inputs to collect up front
 
 At minimum, the UI should surface:
@@ -40,5 +49,24 @@ At minimum, the UI should surface:
 - Manifest location
 - Selection file reference
 - Whether optional files such as assays, targets, compounds, or structure files are present
+
+For higher-level intake workflows, also capture:
+
+- indication
+- context of use
+- positive supporting evidence
+- negative or risk evidence
+- target metadata such as symbol, UniProt ID, modality, and mechanism of action
+
+If the workflow supports structured intake beyond the file picker, also collect:
+
+- whether the request is single-target or explicitly approved as multi-target
+- known liabilities or historical failure modes
+- specific questions the user wants the diligence run to answer
+- any submission notes that should survive into the packaged bundle
+
+## Authenticated versus unauthenticated submissions
+
+If the product supports signed-in users, a successful submission can create a trackable job record after intake. If the user is not signed in, the system should still allow submission or draft creation, but it should make clear what tracking and follow-up capabilities are unavailable.
 
 For the exact file contract, see [Supported Inputs](../validation-system/supported-inputs.md).

@@ -14,6 +14,10 @@ CB-TRI is the top-line computational risk index in the report package. It is des
 
 CB-TRI should be read as an aggregate view over the current computational evidence scope. The score is intended to surface overall risk magnitude under the executed workflow, not to hide the underlying evidence channels.
 
+![CB-TRI example](../../report_images/cbtri_report.png)
+
+_A rendered CB-TRI panel is the top-line synthesis view, not the whole argument._
+
 ## Risk channels
 
 The current framing separates risk into channels such as:
@@ -25,6 +29,10 @@ The current framing separates risk into channels such as:
 - Clinical precedent
 
 Those channels are part of the explanation layer for the score and should remain visible to the user.
+
+The biology-risk sections in the report are one example of how a channel should remain inspectable:
+
+![Target biology risk summary example](../../report_images/target_biology_risk_summary.png)
 
 ## What CB-TRI does not do
 
@@ -40,6 +48,10 @@ The user still owns the investment or execution policy applied to the score.
 ## How to interpret missing evidence
 
 Coverage and confidence context should remain separate from the risk score itself. If evidence is missing, ineligible, or weak, that should be shown explicitly rather than hidden inside a single composite number.
+
+Projected failure-mode panels help make that distinction visible by showing what is risky because of evidence content versus what is risky because of evidence absence:
+
+![Projected failure modes example](../../report_images/projected_failure_modes.png)
 
 ## Recommended reading order
 

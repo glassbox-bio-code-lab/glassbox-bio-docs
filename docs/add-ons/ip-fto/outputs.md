@@ -9,4 +9,6 @@ tags:
 
 # IP/FTO Outputs
 
-Document the output types, confidence boundaries, and how they relate back to the broader diligence decision.
+Coming soon.
+
+This page will document the output types, confidence boundaries, and how they relate back to the broader diligence decision.

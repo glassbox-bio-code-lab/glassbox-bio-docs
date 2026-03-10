@@ -39,6 +39,28 @@ At minimum, provide:
 
 The `portfolio_selected.csv` file is resolved through `sources.json`, so both must be present and consistent.
 
+## High-level intake checklist
+
+Before you worry about the runtime folder layout, make sure the submission itself is intelligible. A strong package usually starts with:
+
+- target identifiers such as gene symbols, protein names, aliases, and stable IDs
+- compound identifiers or chemical structures such as SMILES
+- indication and context-of-use framing
+- modality, delivery, or exclusion constraints
+- citations or source links when they are available
+
+This is the practical handoff checklist teams use before they normalize the materials into the runner-facing file contract.
+
+## Submission hygiene
+
+The intake material should also follow a few simple packaging rules:
+
+- provide one target per request unless a multi-target workflow has been explicitly approved
+- bundle supporting context in a short, structured memo rather than scattering it across unrelated files
+- keep filenames stable and self-explanatory
+- include known liabilities, historical failure modes, or important exclusions when they are already known
+- include specific questions the run should help answer when the submission is exploratory rather than purely operational
+
 ## Optional files
 
 Add these when they are available for your project:
@@ -49,6 +71,19 @@ Add these when they are available for your project:
 - `structures/*.pdb`
 
 Missing optional files do not necessarily prevent a run, but they can reduce downstream module coverage and interpretation confidence.
+
+## Inputs that change category routing
+
+Some optional-looking files have policy significance because they change category resolution rather than just adding extra context.
+
+Use this rough mapping:
+
+- no structure files and no assay table usually keeps the run in a ligand-only category
+- staged receptor structure can move the run into a structure-backed category
+- staged labeled assay data can move the run into an assay-aware category
+- physics-audit paths require more than a structure file; they also depend on admissibility and preflight constraints
+
+That is why input preparation should be reviewed against [Category Policy and Routing](./category-policy-and-routing.md), not just against the file checklist.
 
 ## `sources.json` expectations
 
@@ -62,6 +97,31 @@ Missing optional files do not necessarily prevent a run, but they can reduce dow
 - `pdbs`
 
 The exact key names can vary slightly by pipeline generation path, but the operational rule is stable: the manifest must point to real files under `01_sources/` that the runner can resolve at runtime.
+
+For customer-facing intake flows, `sources.json` can also carry higher-level context such as:
+
+- `indication`
+- `context_of_use`
+- `evidence_positive`
+- `evidence_negative`
+
+That intake-style context is useful for onboarding and interpretation, but it does not replace the runner-facing file references required at execution time.
+
+## `targets.csv` in onboarding flows
+
+`targets.csv` is optional in the deployed runner contract, but it is commonly used in onboarding and target-diligence intake flows.
+
+Typical columns include:
+
+- `target_symbol`
+- `uniprot_id`
+- `target_name`
+- `hgnc_id`
+- `organism`
+- `modality`
+- `mechanism_of_action`
+
+Use it to make the target context explicit early, then keep the staged runtime bundle aligned with the manifest-driven contract.
 
 ## `portfolio_selected.csv` expectations
 
@@ -127,3 +187,5 @@ If PreFlight UI is part of your workflow, validate the package before submission
 - [Supported Inputs](../preflight-ui/validation-system/supported-inputs.md)
 - [Validation Rules](../preflight-ui/validation-system/validation-rules.md)
 - [Troubleshooting](../preflight-ui/validation-system/troubleshooting.md)
+
+Then confirm the staged package is compatible with the intended category path in [Category Policy and Routing](./category-policy-and-routing.md).

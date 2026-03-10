@@ -28,6 +28,7 @@ Do not allow the following to drift silently between validation and execution:
 - Referenced file paths
 - Selected portfolio file
 - Optional file presence used to determine workflow readiness
+- Category-driving inputs such as structure files, assay tables, or admissibility-sensitive fields
 
 If these change, the package should be revalidated rather than passed straight through.
 
@@ -41,6 +42,8 @@ In the CLI-oriented deployment flow, the handoff normally looks like this:
 4. Enable the job and start the run
 
 That sequence keeps validation and execution separate while still preserving a smooth operator workflow.
+
+Before execution starts, the operator should still confirm that the staged package matches the intended routing category in [Category Policy and Routing](../../computational-safety-diligence/category-policy-and-routing.md).
 
 ## Next step after handoff
 

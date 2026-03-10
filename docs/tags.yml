@@ -42,13 +42,3 @@ release-notes:
   label: Release Notes
   permalink: /tags/release-notes
   description: Product and platform release history.
-
-tutorials:
-  label: Tutorials
-  permalink: /tags/tutorials
-  description: Step-by-step guides and walkthroughs.
-
-support:
-  label: Support
-  permalink: /tags/support
-  description: Support resources and contact information.

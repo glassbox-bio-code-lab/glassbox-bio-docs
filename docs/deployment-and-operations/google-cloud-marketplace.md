@@ -112,6 +112,8 @@ The intended behavior is:
 - Usage emission happens only on successful completion
 - Reporting remains idempotent per `run_id`
 
+This billing distinction is separate from category routing. Marketplace usage reporting only cares about Standard versus Deep metering, while module eligibility still follows the staged package and [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md).
+
 ### Readiness requirements
 
 The Hub-side or deployment-side billing flow is considered ready only when:
@@ -162,5 +164,6 @@ helm template review-standard ./manifest/chart -f ./manifest/chart/values-standa
 ## Related pages
 
 - [Kubernetes and Helm](./kubernetes-and-helm.md)
+- [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md)
 - [Config Reference](../reference/config-reference.md)
 - [Security Overview](../trust-and-security/security-overview.md)

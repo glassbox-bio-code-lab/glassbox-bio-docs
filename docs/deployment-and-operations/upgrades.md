@@ -49,6 +49,8 @@ Moving between Standard and Deep is not just a cosmetic change. It can involve:
 
 Treat this as a real upgrade event, not a small patch.
 
+Keep this separate from category routing. A run can stay in the same scientific category while moving from Standard to Deep, and a Deep-capable deployment still depends on the staged package for category resolution. See [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md).
+
 ## PVC sizing rules
 
 Do not shrink an existing PVC. If the current claim is larger than the new requested size, Kubernetes will reject the change.

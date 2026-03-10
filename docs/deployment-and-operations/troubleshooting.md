@@ -112,6 +112,8 @@ The job reached a terminal state, but the expected artifacts are not in the expe
 
 Compare the runtime config to the expected storage path, then inspect the logs for copy or upload steps.
 
+Also confirm that the staged input package matched the intended routing category. A run can complete with fewer artifacts than expected if the package resolved into a narrower category than the operator assumed. See [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md).
+
 ## `ubbagent` not ready
 
 ### What it means

@@ -41,6 +41,25 @@ The Marketplace review checklist expects the following baseline:
 
 These are baseline controls, not optional hardening extras.
 
+## Payment and transaction security
+
+Where direct billing applies, payment processing is delegated to Stripe rather than handled inside the platform. The documented posture is:
+
+- Glassbox does not store full card data
+- Stripe handles payment information under PCI-DSS controls
+- The platform retains transaction identifiers and billing metadata only as needed for operations and support
+
+## Audit integrity
+
+Security posture also includes output integrity controls:
+
+- SHA-256 checksums over key artifacts
+- signed provenance bundles
+- seed-locked reproducibility materials where that product tier is enabled
+- rendered verification artifacts such as `seal.svg`
+
+These controls are designed to make tampering, substitution, and silent drift detectable after export.
+
 ## Data and artifact boundaries
 
 Operationally, the platform distinguishes between:
@@ -60,5 +79,9 @@ Security posture is not just preventive. It is also inspectable through:
 - Usage reporting metadata
 - Seal verification artifacts
 - Logs for entitlement lifecycle events
+
+## Reporting security issues
+
+Security questions and vulnerability reports should be routed through the documented support or security contact path rather than embedded in ordinary run submissions.
 
 For the verification workflow, see [Auditability](./auditability.md) and [Cryptographic Provenance](./cryptographic-provenance.md).

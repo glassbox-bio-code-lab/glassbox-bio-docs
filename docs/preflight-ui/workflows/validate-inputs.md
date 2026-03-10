@@ -21,6 +21,8 @@ The validator should check the same operational contract the runner depends on:
 - The portfolio file contains the required molecular structure column
 - Referenced optional files exist when declared
 
+Validation should also surface category implications. A package that lacks structure files or assay data may still be valid, but it should not be presented as if it supports the same module route as a structure-backed or assay-aware submission. See [Category Policy and Routing](../../computational-safety-diligence/category-policy-and-routing.md).
+
 ## Validation timing
 
 Run validation:

@@ -9,4 +9,6 @@ tags:
 
 # IP/FTO Overview
 
-Use this section to explain what the IP/FTO add-on answers, when it should be used, and where it sits relative to the core analysis workflow.
+Coming soon.
+
+This section will explain the IP/FTO add-on workflow and its relationship to the core analysis surface in a later pass.

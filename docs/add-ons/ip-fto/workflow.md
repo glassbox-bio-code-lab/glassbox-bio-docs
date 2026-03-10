@@ -9,11 +9,6 @@ tags:
 
 # IP/FTO Workflow
 
-Define the user journey from activation to final interpretation.
+Coming soon.
 
-## Cover
-
-- Triggering conditions
-- Review steps
-- Where outputs appear
-- When to escalate to expert review
+This page will define the user journey from activation to final interpretation for the IP/FTO add-on.

@@ -8,7 +8,7 @@ tags:
 
 # Cryptographic Provenance
 
-The current provenance model centers on a signed seal bundle produced at successful run completion. It is designed to bind inputs, runtime metadata, and outputs into a verifiable artifact that can be checked outside the original execution environment.
+The current provenance model centers on the GBX X2 seal standard: a signed, dual-channel provenance bundle produced at successful run completion. It is designed to bind inputs, runtime metadata, and outputs into a verifiable artifact that can be checked outside the original execution environment.
 
 ## Core artifacts
 
@@ -21,6 +21,7 @@ The provenance bundle can include:
 - `seal/seal.svg`
 - `seal/seal.png`
 - `seal/VERIFY.md`
+- `seal/public_key.pem`
 - `results/summary.json`
 
 These files are the operational record for what ran and the verification record for what was sealed.
@@ -86,6 +87,17 @@ The barcode channel is deterministically derived from:
 
 The expected barcode digest is stored in the signed seal payload and can also be embedded in the SVG metadata for reconciliation.
 
+## Verification states
+
+The seal shown in a report is stateful rather than decorative. User-facing workflows should distinguish at least:
+
+- `VERIFIED` for valid signature and matching channels
+- `UNVERIFIED` for a present seal that has not yet been checked in the current viewer context
+- `INVALID` for signature failure or channel mismatch
+- `PENDING` or `PARTIAL` for incomplete lineage or unreconciled sealing state
+
+Only `VERIFIED` should be treated as decision-grade.
+
 ## Verification rule
 
 A scan should be treated as valid only when:
@@ -103,6 +115,8 @@ The currently documented verification surfaces are:
 - A user-facing verification portal that accepts `seal.svg`
 - `POST /api/seal/verify`
 
+Verification can also be performed offline with the shipped public key and bundle artifacts. That is an important trust boundary: customers can validate provenance without depending on a live vendor check.
+
 Use the SVG artifact as the portable verification entry point for user-facing workflows.
 
 ## Important boundary
@@ -113,5 +127,21 @@ Seal verification proves that the artifact is valid for a recorded run. It does 
 - The inputs were sufficient for every analysis family
 - Registry access has been revoked for every party
 - IAM, entitlement issuance, or wet-lab governance controls have been replaced
+
+## Trust boundaries
+
+Public verification materials include:
+
+- the verification process
+- seal artifacts in the bundle
+- the public verification key
+
+Private issuance materials include:
+
+- signing private keys
+- issuance credentials
+- entitlement secrets
+
+Private materials are never part of the customer bundle.
 
 For the customer-facing explanation, see [Verification Seal](../computational-safety-diligence/outputs/verification-seal.md).

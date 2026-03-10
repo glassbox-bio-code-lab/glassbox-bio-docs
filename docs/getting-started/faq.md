@@ -9,10 +9,32 @@ tags:
 # FAQ
 
 ## What is the difference between PreFlight UI and Computational Safety Diligence?
-PreFlight UI verifies readiness before submission. Computational Safety Diligence performs the core analysis and produces the report package.
+PreFlight UI is the packaging and readiness surface. Computational Safety Diligence is the core execution and interpretation surface. PreFlight UI helps prevent bad submissions. Computational Safety Diligence turns an accepted run into the actual risk, evidence, and reproducibility artifacts.
 
 ## Are add-ons the same as internal modules?
-No. Add-ons are customer-facing optional product extensions. Internal modules are subsystems of the core analysis product.
+No. Add-ons are customer-facing optional extensions. Internal modules are the internal evidentiary subsystems that make up the core analysis run.
 
 ## Where should a new customer start?
-Start in Getting Started, then move to PreFlight UI, then to Computational Safety Diligence.
+Start in Getting Started, then move to Quickstart if you need action, or Platform Overview if you need orientation. After that, go to PreFlight UI for input readiness and then Computational Safety Diligence for the run and output interpretation path.
+
+## What is the main output of the pipeline?
+
+The main output is not just an HTML report. It is a run-scoped bundle that includes summary artifacts, threshold and category artifacts, evidence-state outputs, reproducibility materials, and seal-related provenance artifacts.
+
+## Does a successful run mean the science is correct?
+
+No. A successful run means the computation executed and produced a verifiable artifact. Scientific truth, wet-lab validity, and investment policy decisions remain separate from computational execution success.
+
+## Why can a run have a score and still be unresolved?
+
+Because the pipeline separates risk scoring from claim acceptance. A run can produce a valid CB-TRI score while still being unresolved due to missing required evidence, missing-proof handling, or claim-strength demotion.
+
+## What should I read after a first run completes?
+
+Read in this order:
+
+1. `summary.json`
+2. Fast-fail summary
+3. Full computational safety report
+4. Evidence-state and claim-acceptance artifacts
+5. Reproducibility and seal artifacts if you need audit depth

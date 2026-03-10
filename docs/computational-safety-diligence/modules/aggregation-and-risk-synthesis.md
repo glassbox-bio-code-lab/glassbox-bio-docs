@@ -8,4 +8,40 @@ tags:
 
 # Aggregation and Risk Synthesis
 
-This page explains how module outputs roll up into the main decision artifacts without turning the aggregation logic into a black box.
+The aggregation layer is where module-native outputs become category scores, risk summaries, fast-fail packets, and TRI-facing report artifacts.
+
+## Artifacts involved in aggregation
+
+The example bundle exposes the aggregation chain through:
+
+- `results/combined_unified_computational_outputs.json`
+- `thresholds/category_scores.json`
+- `thresholds/measurement_profile.json`
+- `thresholds/risk_summary.json`
+- `results/risk_channels_map.json`
+- `results/cbtri_policy_v1.json`
+- `results/summary.json`
+
+## What aggregation does
+
+Aggregation combines:
+
+- raw module outputs
+- category policy
+- threshold logic
+- risk-channel mapping
+- claim and tier rules
+
+into the final report-facing artifacts.
+
+## Why this is not a black box
+
+The example output keeps the aggregation inputs inspectable:
+
+- category scores show individual metric-level risk assignments
+- measurement profile shows threshold rules
+- risk summary shows category-by-category breakdown
+- risk channels map shows how modules feed report channels
+- CB-TRI policy shows channel weighting and band thresholds
+
+That makes the aggregation layer auditable rather than purely narrative.

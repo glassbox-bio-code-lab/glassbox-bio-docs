@@ -33,6 +33,8 @@ Use one of the two supported execution profiles:
 
 Deep runs use the same image repository with a GPU-tagged image and `config.runMode=deep`.
 
+This profile choice does not select the scientific category. Category routing is determined by the staged package and the policy in [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md).
+
 ## 1. Set the core variables
 
 ```bash
@@ -95,6 +97,22 @@ At minimum, stage:
 - `portfolio_selected.csv`
 
 Prepare the full package using [Prepare Inputs](../computational-safety-diligence/prepare-inputs.md). If you are using PreFlight UI, validate the package before you hand it off to analysis.
+
+Before you start the job, confirm that the staged package actually supports the category you expect. Structure files, assay tables, and admissibility constraints change which module path the pipeline will take.
+
+### Customer-onboarding shorthand
+
+Some customer-facing onboarding materials describe a higher-level intake pair rather than the full runtime bundle:
+
+- `targets.csv`
+- `sources.json`
+
+That shorthand is still useful for early intake and target-diligence setup. In that flow:
+
+- `targets.csv` carries target identifiers and modality context
+- `sources.json` carries indication, context of use, and positive or negative evidence statements
+
+By execution time, the staged package still needs to satisfy the deployed runner contract described in [Prepare Inputs](../computational-safety-diligence/prepare-inputs.md).
 
 ## 4. Enable the job and start the run
 

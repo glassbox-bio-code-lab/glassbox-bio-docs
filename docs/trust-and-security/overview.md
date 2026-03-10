@@ -17,6 +17,7 @@ This section explains why the outputs can be trusted as run artifacts without ov
 - Auditability and run provenance
 - Cryptographic sealing and verification
 - Retention, deletion, and self-hosted trust differences
+- Direct and Marketplace policy documents for privacy, billing, terms, and support
 
 ## Trust model in one sentence
 

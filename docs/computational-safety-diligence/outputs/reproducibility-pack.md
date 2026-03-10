@@ -14,48 +14,48 @@ The reproducibility pack is the subset of run artifacts that lets an operator or
 
 Expect the reproducibility pack to include at least:
 
-- `run_manifest.json`
-- `preseal.json`
-- `seal/seal.json`
-- `seal/seal.sig`
-- `seal/seal.svg`
-- `seal/VERIFY.md`
+- `repro_pack/manifest.json`
+- `repro_pack/environment/python.json`
+- `repro_pack/environment/system.json`
+- `repro_pack/environment/binaries.json`
+- `repro_pack/container/Dockerfile`
+- `repro_pack/container/build.sh`
+- `repro_pack/container/run.sh`
+- `repro_pack/container/verify.sh`
+- `repro_pack/outputs/expected_output_hashes.json`
 
 Depending on the release, the results directory may also include summary and metrics artifacts that are useful for spot-checking completeness.
 
-## What `run_manifest.json` should capture
+## What the example reproducibility pack captures
 
-The run manifest is the operational backbone of the pack. It should retain:
+The example pack captures:
 
-- `run_id`
-- Effective run mode
-- Selected usage metric metadata when Marketplace billing is enabled
-- Input and output path context
-- Image identity or container reference
-- Core configuration needed to interpret the run
+- base image and entrypoint module
+- environment defaults
+- input references
+- output artifact root
+- Python package inventory
+- OS package inventory
+- binary presence and hashes
+- container rebuild scripts
+- output-hash verification support
 
-This file is the first place to look when a reviewer asks, "What exactly ran?"
+This is the first place to look when a reviewer asks, "Can I rebuild or verify this run environment?"
 
-## What `preseal.json` adds
+## What `run_manifest.json` still adds
 
-`preseal.json` captures the metadata that feeds the sealing step. Use it when you need to compare the final seal bundle with the run state that immediately preceded signature generation.
+The main `run_manifest.json` outside the pack still matters because it connects the repro materials to the run identity, input context, and entitlement/execution metadata.
 
-## What the seal bundle adds
+## What `verify.sh` is for
 
-The seal bundle provides:
-
-- A machine-readable seal document
-- A signature artifact
-- A portable SVG representation for user-facing verification
-- Verification instructions
-
-Together, these artifacts let you verify that the run package was sealed and that the seal can be checked independently of the original runtime.
+The example verification helper compares reproduced outputs against `expected_output_hashes.json`. That is different from seal verification. It is replay verification for the output files themselves.
 
 ## Recommended audit workflow
 
 1. Confirm the `run_id` and runtime metadata in `run_manifest.json`
-2. Review `preseal.json` to understand the state presented to the sealing stage
-3. Verify the seal using `seal.svg` and the published verification flow
-4. Cross-check any customer-facing report claims against the manifest and evidence-linked outputs
+2. Review the captured environment and build scripts
+3. Rebuild or rerun in a controlled workspace if needed
+4. Use the output-hash verifier to compare reproduced outputs
+5. Cross-check customer-facing report claims against the main manifest and result artifacts
 
 For the output inventory view, see [Report Package Overview](./report-package-overview.md).

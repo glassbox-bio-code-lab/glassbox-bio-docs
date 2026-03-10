@@ -1,5 +1,5 @@
 ---
-title: CLI Reference
+title: INC-CLI Reference
 description: Command-line interface reference for operators or power users.
 sidebar_position: 3
 tags:

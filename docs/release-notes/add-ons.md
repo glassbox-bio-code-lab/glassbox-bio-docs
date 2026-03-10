@@ -1,5 +1,5 @@
 ---
-title: Add-Ons
+title: INC-Add-Ons
 description: Release history for optional extension products.
 sidebar_position: 5
 tags:

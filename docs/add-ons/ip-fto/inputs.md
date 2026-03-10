@@ -9,4 +9,6 @@ tags:
 
 # IP/FTO Inputs
 
-Document the required and optional inputs, source expectations, and how PreFlight UI may validate readiness for this add-on.
+Coming soon.
+
+This page will document the required and optional inputs, source expectations, and readiness requirements for the IP/FTO add-on.

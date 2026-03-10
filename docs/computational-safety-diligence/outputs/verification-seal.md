@@ -21,6 +21,18 @@ The seal supports claims about run provenance and integrity, including:
 
 In practice, the seal is emitted at run completion along with `seal.json`, `seal.sig`, and `seal.svg`.
 
+In the fuller GBX X2 framing, the seal is a machine-verifiable integrity indicator for decision-grade audit packets. It binds inputs, manifest, outputs, and a unique seal identifier into a signed provenance payload.
+
+## Pre-seal versus final seal
+
+The example output bundle currently stops at the pre-seal stage:
+
+- `seal/preseal.json`
+- `summary.seal_status = pending_online_verification`
+- `summary.seal_reason = run_complete_unreachable`
+
+That is an important operational distinction. A run can finish and still be waiting for the final online verification step that produces the public-facing seal bundle.
+
 ## What the seal does not attest to
 
 Do not describe the seal as proof that:
@@ -44,6 +56,19 @@ The user-facing portal referenced by the current customer runbook is:
 ```text
 https://glassbox-bio.com/verify
 ```
+
+Offline verification is also supported with the included public key and the contents of the `seal/` folder. That offline path is important for auditors, boards, and counterparties that do not want to rely exclusively on a live vendor endpoint.
+
+## Verification states on reports
+
+When a seal is shown in a report or packet, describe its state explicitly:
+
+- `VERIFIED` means the signature is valid and the dual-channel checks reconcile
+- `UNVERIFIED` means the seal is present but not yet checked in the current viewer context
+- `INVALID` means a mismatch or signature failure was detected
+- `PENDING` or `PARTIAL` means the run lineage is not fully reconciled and should never be treated as verified
+
+Only `VERIFIED` packets should be forwarded as decision-grade artifacts.
 
 ## Rerun linkage
 

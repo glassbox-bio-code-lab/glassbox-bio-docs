@@ -44,6 +44,18 @@ PreFlight UI should recognize, validate, and classify these as optional rather t
 
 Optional inputs can unlock additional downstream analysis depth, but their absence should not be treated as an automatic submission failure unless a selected workflow explicitly depends on them.
 
+## Inputs that affect category resolution
+
+PreFlight UI should also explain when a package changes category rather than simply becoming richer.
+
+The current policy source in `CATEGORIES.txt` means the validator should treat these as category-driving signals:
+
+- presence or absence of receptor structure
+- presence or absence of labeled assay data
+- admissibility state for physics-audit-eligible paths
+
+The validator does not need to promise the final runtime category on its own, but it should surface the likely category implications of the staged package and link users to [Category Policy and Routing](../../computational-safety-diligence/category-policy-and-routing.md).
+
 ## Supported file expectations
 
 ### `sources.json`

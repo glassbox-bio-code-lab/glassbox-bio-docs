@@ -1,5 +1,5 @@
 ---
-title: Physics Modules
+title: INC-Physics Modules
 description: Pages for physics and structure-related modules.
 sidebar_position: 3
 tags:
