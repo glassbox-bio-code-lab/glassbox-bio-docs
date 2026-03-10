@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx docusaurus:*)"
+      "Bash(npx docusaurus:*)",
+      "Bash(grep:*)",
+      "Bash(python3:*)"
     ]
   }
 }

@@ -44,7 +44,7 @@ This section summarizes coverage and highlights the most concerning signals:
 - **Evidence profile** – whether evidence is _SUPPORTED_, _LIMITED_ or _UNRESOLVED_.
 - **Observed risk signals** – total number of non‑low risk signals (4).
 
-This overview tells you how complete the computation was and whether there are unresolved evidence gaps. A low coverage fraction (<1.0) indicates missing modules; _MIXED_ evidence strength means some predictions have limited confidence.
+This overview tells you how complete the computation was and whether there are unresolved evidence gaps. A low coverage fraction (&lt;1.0) indicates missing modules; _MIXED_ evidence strength means some predictions have limited confidence.
 
 ### 5. Target Biology Risk Snapshot
 
