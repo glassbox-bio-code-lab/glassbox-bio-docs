@@ -9,6 +9,78 @@
   margin-bottom: 2rem;
 }
 
+.introText {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-bottom: 0.75rem;
+}
+
+.introText strong {
+  color: var(--text-primary);
+}
+
+.introMuted {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 1rem;
+}
+
+.introMuted strong {
+  color: var(--text-secondary);
+}
+
+/* ---- Where to Begin grid ---- */
+.beginGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 996px) {
+  .beginGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.beginCard {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-card);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.beginCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+  color: inherit;
+  text-decoration: none;
+}
+
+.beginCard h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.beginCard p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---- 3-col feature grid ---- */
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -49,4 +121,23 @@
   font-size: 0.88rem;
   line-height: 1.65;
   margin: 0;
+}
+
+/* ---- Artifact list ---- */
+.artifactList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.5rem;
+}
+
+.artifactList li {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-card);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
 }

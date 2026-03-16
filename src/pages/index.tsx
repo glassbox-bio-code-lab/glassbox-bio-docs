@@ -57,17 +57,17 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   const supportPageUrl = String(
     siteConfig.customFields?.supportPageUrl ||
-      "https://www.glassbox-bio.com/support",
+      "https://www.glassbox-bio.com/contact",
   );
 
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className={clsx("hero__title", styles.heroTitle)}>
-          {siteConfig.title}
+          Glassbox Bio Documentation
         </Heading>
         <p className={clsx("hero__subtitle", styles.heroSubtitle)}>
-          {siteConfig.tagline}
+          Verification infrastructure for AI-designed biology.
         </p>
         <div className={styles.buttons}>
           <Link className="btn-primary" to="/docs">
@@ -108,7 +108,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={siteConfig.title}
-      description="Project documentation site powered by markdown files in the repository docs directory, with support routed to the main Glassbox website."
+      description="Verification infrastructure for AI-designed biology. Prepare inputs, run verification workflows, interpret outputs, and operate the platform in production."
     >
       <div className={styles.homeLayout}>
         <HomepageSidebar />

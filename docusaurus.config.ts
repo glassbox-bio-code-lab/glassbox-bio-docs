@@ -12,7 +12,7 @@ const config: Config = {
   customFields: {
     supportPageUrl:
       process.env.DOCS_SUPPORT_PAGE_URL ||
-      "https://www.glassbox-bio.com/support",
+      "https://www.glassbox-bio.com/contact",
   },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -120,7 +120,7 @@ const config: Config = {
         {
           href:
             process.env.DOCS_SUPPORT_PAGE_URL ||
-            "https://www.glassbox-bio.com/support",
+            "https://www.glassbox-bio.com/contact",
           label: "Support Chat",
           position: "right",
         },
@@ -158,7 +158,7 @@ const config: Config = {
               label: "Support Chat",
               href:
                 process.env.DOCS_SUPPORT_PAGE_URL ||
-                "https://www.glassbox-bio.com/support",
+                "https://www.glassbox-bio.com/contact",
             },
             {
               label: "GitHub",
