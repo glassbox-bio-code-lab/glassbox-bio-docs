@@ -530,6 +530,7 @@ img {
 
 .theme-doc-markdown {
   padding-bottom: 4rem;
+  margin-left: 3rem;
 }
 
 .theme-doc-markdown p,
@@ -537,13 +538,15 @@ img {
 .theme-doc-markdown ol {
   margin-bottom: 1.15rem;
   line-height: 1.75;
+  margin-left: 3rem;
 }
 
 .theme-doc-markdown ol {
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 .theme-doc-markdown li {
   margin-bottom: 0.35rem;
+  margin-left: 3rem;
 }
 
 .theme-doc-markdown h3 {
@@ -554,6 +557,7 @@ img {
 .theme-doc-markdown h4 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  margin-left: 3rem;
 }
 
 /* ===== RIGHT SIDEBAR (TOC) — scaled to match left sidebar ===== */
