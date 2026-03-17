@@ -1,12 +1,12 @@
 ---
 title: Architecture
-description: High-level architecture of the docs-era Glassbox Bio platform.
+description: High-level architecture of the customer deployment bundle.
 sidebar_position: 2
 ---
 
 # Architecture
 
-The Marketplace customer bundle is a small deployment system rather than a large service mesh. The architecture is centered on one primary execution workload and a few supporting control surfaces.
+The Marketplace customer bundle is a focused deployment system rather than a large service mesh. The architecture is centered on one primary execution workload and a small number of supporting control surfaces.
 
 ## Core runtime components
 

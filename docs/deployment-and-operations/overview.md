@@ -32,13 +32,7 @@ The current supported customer path is a Kubernetes Job deployed by Helm, with:
 
 ## Recommended reading order
 
-1. [Architecture](./architecture.md)
-2. [Component Topology](./component-topology.md)
-3. [Kubernetes and Helm](./kubernetes-and-helm.md)
-4. [Configuration](./configuration.md)
-5. [Secrets](./secrets.md)
-6. [Storage and Networking](./storage-and-networking.md)
-7. [Troubleshooting](./troubleshooting.md)
+Start with [Architecture](./architecture.md) and [Component Topology](./component-topology.md), then move to [Kubernetes and Helm](./kubernetes-and-helm.md), [Configuration](./configuration.md), [Secrets](./secrets.md), [Storage and Networking](./storage-and-networking.md), and [Troubleshooting](./troubleshooting.md).
 
 ## What is intentionally out of scope
 

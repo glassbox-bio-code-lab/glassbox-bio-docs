@@ -6,7 +6,7 @@ sidebar_position: 5
 
 # Kubernetes and Helm
 
-This page is the operator-facing runbook for deploying the job on Kubernetes with Helm.
+This page explains how to deploy the job on Kubernetes with Helm.
 
 ## Prerequisites
 

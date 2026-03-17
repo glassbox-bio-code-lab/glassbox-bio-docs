@@ -6,7 +6,7 @@ sidebar_position: 4
 
 # Google Cloud Marketplace
 
-This page covers the Marketplace-specific packaging, publisher prerequisites, supported customer deployment validation, and required usage reporting model for the public customer bundle.
+This page explains how the public Marketplace bundle is packaged, what must be in place before publication, and how customer deployments should be checked and metered.
 
 ## Package layout
 
@@ -54,9 +54,9 @@ Before publishing to Cloud Marketplace, make sure the publisher environment is p
 - Publish exact version tags
 - Prefer immutable image digests in release documentation and manifests
 
-## Supported deployment validation
+## Customer deployment checks
 
-The supported customer path should validate installation, functionality, and clean removal with billing still enabled:
+Use this flow to confirm that a customer-ready deployment installs cleanly, runs successfully, and can be removed without leaving unintended resources behind.
 
 ### Install
 
@@ -73,7 +73,7 @@ helm upgrade --install glassbox-mol-audit ./manifest/chart \
   --set ubbagent.enabled=true
 ```
 
-### Functionality check
+### Smoke test
 
 ```bash
 kubectl logs -n glassbox-mol-audit job/glassbox-mol-audit --all-containers=true
@@ -87,11 +87,11 @@ helm uninstall glassbox-mol-audit -n glassbox-mol-audit
 kubectl delete namespace glassbox-mol-audit
 ```
 
-If PVC storage is used instead of GCS, delete the PVC only when you intend to remove retained outputs.
+If PVC storage is used instead of GCS, delete the claim only when you intend to remove retained customer outputs.
 
-## Marketplace usage reporting and `ubbagent`
+## Marketplace metering
 
-Marketplace usage reporting through `ubbagent` is required for the supported commercial deployment path.
+Marketplace metering through `ubbagent` is part of the supported customer deployment path.
 
 ### Billing contract
 
@@ -110,24 +110,23 @@ The intended behavior is:
 
 This billing distinction is separate from category routing. Marketplace usage reporting only cares about Standard versus Deep metering, while module eligibility still follows the staged package and [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md).
 
-### Readiness requirements
+### Metering requirements
 
-The Hub-side or deployment-side billing flow is considered ready only when:
+Marketplace metering is correctly configured only when:
 
 - `ubbagent.enabled=true`
-- `UBBAGENT_ENABLED=true`
-- `MARKETPLACE_REPORTING_SECRET` is set
-- The reporting secret exists in the namespace
-- The `ubbagent` ConfigMap exists in the namespace
-- The `UBBAGENT_IMAGE` is configured
+- `marketplace.reportingSecret` points to a valid reporting secret
+- the reporting secret exists in the namespace
+- the `ubbagent` ConfigMap and image are available to the deployment
+- the chart is configured with the correct metric names for Standard and Deep runs
 
-### Metric selection
+### Metric mapping
 
 Mode-aware metric selection should prefer:
 
-- `UBBAGENT_METRIC_NAME_STANDARD` for Standard runs
-- `UBBAGENT_METRIC_NAME_DEEP` for Deep runs
-- `UBBAGENT_METRIC_NAME` only as the legacy fallback
+- `ubbagent.metricNameStandard` for Standard runs
+- `ubbagent.metricNameDeep` for Deep runs
+- `ubbagent.metricName` only as the legacy fallback
 
 ## Deployment checklist
 
@@ -140,7 +139,9 @@ Operators should be able to confirm:
 - Run manifest and verification artifacts are emitted
 - Install and uninstall instructions are runnable as written
 
-## Recommended release checks
+## Release checks
+
+Before publishing or promoting a release, run:
 
 ```bash
 helm lint ./manifest/chart
@@ -150,7 +151,4 @@ helm template marketplace-deep ./manifest/chart -f ./manifest/chart/values-gpu.y
 
 ## Related pages
 
-- [Kubernetes and Helm](./kubernetes-and-helm.md)
-- [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md)
-- [Config Reference](../reference/config-reference.md)
-- [Security Overview](../trust-and-security/security-overview.md)
+For cluster installation details, see [Kubernetes and Helm](./kubernetes-and-helm.md). For scientific category routing, see [Category Policy and Routing](../computational-safety-diligence/category-policy-and-routing.md). For field-level settings, see [Config Reference](../reference/config-reference.md). For security framing, see [Security Overview](../trust-and-security/security-overview.md).
