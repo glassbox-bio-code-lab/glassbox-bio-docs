@@ -63,6 +63,7 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
+        <div className={styles.heroEyebrow}>Glassbox Bio / Documentation</div>
         <Heading as="h1" className={clsx("hero__title", styles.heroTitle)}>
           Glassbox Bio Documentation
         </Heading>
