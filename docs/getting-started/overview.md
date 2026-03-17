@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Start here to understand the platform surfaces, workflow, and first actions.
+description: Start here to understand the main workflows, recommended reading order, and first actions.
 sidebar_position: 1
 tags:
   - platform
@@ -8,14 +8,14 @@ tags:
 
 # Overview
 
-This section is the orientation layer for new users. It explains where to start, which surface to use first, and how the documentation is meant to mirror the real product journey.
+This section helps new users figure out where to start, which workflow to use first, and how to get to a meaningful first run quickly.
 
 ## What this section covers
 
-- The platform surfaces that matter to a first-time user
+- The main workflows that matter to a first-time user
 - The recommended order of operations from staged inputs to interpreted outputs
 - The fastest route to a first successful run
-- Common first-week questions about product boundaries and workflow expectations
+- Common first-week questions about workflow boundaries and expectations
 
 ## Who should start here
 
@@ -36,4 +36,4 @@ Use this section if you are trying to answer one of these questions:
 
 ## Important framing
 
-The docs are organized around product surfaces rather than around internal implementation layers. That is deliberate. A user should be able to move from preparation to execution to interpretation without needing to know the internal service decomposition first.
+The docs follow the order most teams encounter the product: prepare inputs, run analysis, review outputs, and operate the environment.

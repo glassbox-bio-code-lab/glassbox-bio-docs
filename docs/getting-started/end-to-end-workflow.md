@@ -8,7 +8,7 @@ tags:
 
 # End-to-End Workflow
 
-Use this workflow as the backbone of the docs and of the actual product journey.
+Use this workflow to move from input preparation to review and decision-making.
 
 ## Recommended workflow
 
@@ -30,7 +30,7 @@ Use:
 
 ### 2. Validate readiness
 
-Use the PreFlight UI section when you need packaging and readiness guidance. If those pages are still in placeholder state, use the validation-system and input-contract pages already completed in the repo.
+Use the PreFlight UI section when you need packaging and readiness guidance.
 
 ### 3. Configure and run
 
@@ -67,4 +67,4 @@ If the run is unresolved, look at:
 
 ## Why this matters
 
-The workflow should feel linear to the user even though the emitted artifacts are detailed and layered. The docs should preserve that forward motion.
+The workflow is intended to stay linear even though the emitted artifacts are detailed and layered. If you are working through a first run, use the sections above in order.

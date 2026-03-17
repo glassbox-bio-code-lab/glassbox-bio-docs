@@ -1,6 +1,6 @@
 ---
 title: API Overview
-description: Summary of the externally exposed API surfaces.
+description: Summary of the externally exposed APIs.
 sidebar_position: 2
 tags:
   - reference
@@ -8,7 +8,7 @@ tags:
 
 # API Overview
 
-This page groups the externally relevant API surfaces by workflow rather than by internal service implementation.
+This page groups the externally relevant APIs by workflow.
 
 ## Entitlement and run lifecycle API
 

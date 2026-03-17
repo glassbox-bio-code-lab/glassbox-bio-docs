@@ -8,7 +8,7 @@ tags:
 
 # Workflow Positioning
 
-Glassbox Preflight Certifier is the input-certification layer that sits between raw preparation work and the core target-diligence run.
+Glassbox Preflight Certifier sits between raw preparation work and the core target-diligence run.
 
 PreFlight UI sits between preparation and analysis:
 
@@ -16,7 +16,7 @@ Prepare → **PreFlight UI** → Submit → Analyze → Review → Decide
 
 ## What PreFlight is for
 
-PreFlight is a lightweight, customer-boundary interface bundled with the core product. Its job is to certify inputs before compute starts.
+PreFlight checks inputs before compute starts.
 
 It is designed to:
 
@@ -56,4 +56,4 @@ Once a package is certified or accepted with understood warnings, the user moves
 - the core pipeline resolves category and module plan
 - outputs are written as run-scoped artifacts for interpretation and verification
 
-PreFlight improves run reliability, but it does not replace downstream analysis or report review.
+PreFlight improves run reliability, but result interpretation still happens in the analysis workflow.

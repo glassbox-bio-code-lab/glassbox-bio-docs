@@ -9,6 +9,4 @@ tags:
 
 # IP/FTO Workflow
 
-Coming soon.
-
-This page will define the user journey from activation to final interpretation for the IP/FTO add-on.
+Use this page for the IP/FTO workflow from activation through final review.

@@ -45,9 +45,9 @@ That sequence keeps validation and execution separate while still preserving a s
 
 Before execution starts, the operator should still confirm that the staged package matches the intended routing category in [Category Policy and Routing](../../computational-safety-diligence/category-policy-and-routing.md).
 
-## Next step after handoff
+## After handoff
 
-Once the bundle is accepted for execution, the user should switch to the core analysis docs:
+Once the bundle is accepted for execution, continue with the core analysis docs:
 
 - [Create and Configure a Run](../../computational-safety-diligence/create-and-configure-a-run.md)
 - [Interpret Results](../../computational-safety-diligence/interpret-results.md)

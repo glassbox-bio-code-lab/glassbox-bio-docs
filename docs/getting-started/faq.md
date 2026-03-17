@@ -9,10 +9,10 @@ tags:
 # FAQ
 
 ## What is the difference between PreFlight UI and Computational Safety Diligence?
-PreFlight UI is the packaging and readiness surface. Computational Safety Diligence is the core execution and interpretation surface. PreFlight UI helps prevent bad submissions. Computational Safety Diligence turns an accepted run into the actual risk, evidence, and reproducibility artifacts.
+PreFlight UI is for packaging and readiness checks before a run starts. Computational Safety Diligence is for running the analysis and reviewing the resulting risk, evidence, and reproducibility outputs.
 
-## Are add-ons the same as internal modules?
-No. Add-ons are customer-facing optional extensions. Internal modules are the internal evidentiary subsystems that make up the core analysis run.
+## How are add-ons different from the analysis modules used in a run?
+Add-ons are optional workflow extensions. The analysis modules are the components used to generate the main run outputs.
 
 ## Where should a new customer start?
 Start in Getting Started, then move to Quickstart if you need action, or Platform Overview if you need orientation. After that, go to PreFlight UI for input readiness and then Computational Safety Diligence for the run and output interpretation path.

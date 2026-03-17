@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Architecture and operational guidance across all product surfaces.
+description: Architecture and operational guidance across the platform.
 sidebar_position: 1
 tags:
   - deployment

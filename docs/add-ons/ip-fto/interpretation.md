@@ -9,6 +9,4 @@ tags:
 
 # IP/FTO Interpretation
 
-Coming soon.
-
-This page will state what users can conclude, what they cannot conclude, and when legal or expert escalation is required.
+Use this page to understand what the IP/FTO outputs support, what they do not establish on their own, and when legal or expert escalation is appropriate.

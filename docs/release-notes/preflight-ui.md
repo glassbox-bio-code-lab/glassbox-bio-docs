@@ -1,6 +1,6 @@
 ---
 title: INC-PreFlight UI
-description: Release history for the validation and readiness product surface.
+description: Release history for validation and input-readiness updates.
 sidebar_position: 4
 tags:
   - release-notes

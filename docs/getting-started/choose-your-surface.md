@@ -8,7 +8,7 @@ tags:
 
 # Choose Your Surface
 
-Use this page as the routing layer when you know your goal but not yet the right docs section.
+Use this page when you know your goal but not yet the right docs section.
 
 ## I need to prepare or validate inputs before execution
 
@@ -54,4 +54,4 @@ Best first pages:
 
 Start with **Add-Ons**.
 
-For now, some add-on pages may still be placeholders while the core docs are prioritized.
+Use the add-on overview and workflow pages to find the extension that matches your task.

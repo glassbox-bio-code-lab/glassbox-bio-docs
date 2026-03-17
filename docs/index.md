@@ -21,16 +21,16 @@ Use this docs site according to where you are in the workflow:
 4. **Add-Ons** if you are using optional capability layers such as IP/FTO.
 5. **Deployment & Operations** if you are setting up or administering the platform.
 
-## Product surfaces
+## Main workflows
 
 ### Computational Safety Diligence
-The core analysis and reporting surface. This section explains how to prepare, submit, interpret, and operationalize computational safety diligence outputs.
+The core analysis and reporting workflow. This section explains how to prepare, submit, interpret, and operationalize computational safety diligence outputs.
 
 ### PreFlight UI
-The pre-submission hub and validation surface. This section explains input verification, readiness checks, and handoff into analysis.
+The pre-submission validation workflow. This section explains input verification, readiness checks, and handoff into analysis.
 
 ### Add-Ons
-Optional modules layered onto the core workflow. Each add-on should answer a clearly bounded question, define its own required inputs, and describe how its outputs interact with the core decision flow.
+Optional extensions layered onto the core workflow. Each add-on defines its own required inputs and explains how its outputs interact with the core decision flow.
 
 ## Suggested reading path
 

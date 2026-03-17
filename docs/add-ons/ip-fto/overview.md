@@ -9,6 +9,6 @@ tags:
 
 # IP/FTO Overview
 
-Coming soon.
+The IP/FTO add-on extends Glassbox Bio with patent and freedom-to-operate review workflows.
 
-This section will explain the IP/FTO add-on workflow and its relationship to the core analysis surface in a later pass.
+Use this section for guidance on IP/FTO workflow, inputs, outputs, interpretation, and limitations.

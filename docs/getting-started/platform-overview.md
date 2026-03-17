@@ -20,11 +20,11 @@ At a high level, the platform helps teams move from raw model output to an audit
 - Tamper-evident sealing and offline verification support
 - Machine-readable outputs for replay, validation, and system integration
 
-The human-readable report is a view over a deeper machine-native artifact. That distinction matters because the system is meant to support verification, replay, and audit workflows rather than just generate a PDF-like summary.
+The human-readable report is generated from a deeper machine-readable artifact. That design supports verification, replay, and audit workflows rather than only a PDF-style summary.
 
-## Product surfaces
+## Main workflows
 
-The documentation is organized around three customer-facing surfaces:
+The documentation is organized around three main workflows:
 
 - **Computational Safety Diligence** for the core analysis workflow, outputs, module coverage, and report interpretation
 - **PreFlight UI** for packaging, validating, and certifying inputs before a run starts
@@ -35,11 +35,11 @@ The documentation is organized around three customer-facing surfaces:
 The platform separates the verification stack into four layers:
 
 1. Raw computational evidence from individual models and scientific modules
-2. Evidence normalization into a stable internal schema
+2. Evidence normalization into a stable schema
 3. Risk synthesis, including CB-TRI, channel scores, failure modes, coverage, and confidence context
 4. Human-readable reporting and verification views generated from the sealed artifact
 
-This separation is what makes the system infrastructure rather than just a report generator.
+This separation helps the platform act as verification infrastructure rather than only a report generator.
 
 ## What the core audit is and is not
 
@@ -70,7 +70,7 @@ The primary output is a machine-verifiable risk artifact that can contain:
 - Threshold and confidence context
 - Integrity metadata
 
-The report package renders that artifact for a reviewer, but the artifact itself remains the system of record.
+The report package renders that artifact for a reviewer, but the artifact itself remains the canonical record for verification and replay.
 
 ## Key ideas to keep separate
 
@@ -79,10 +79,10 @@ The report package renders that artifact for a reviewer, but the artifact itself
 
 ## PreFlight UI in context
 
-PreFlight UI is the boundary surface that validates and packages inputs before they enter the core run workflow. Its job is to reduce failed runs, shorten time to first useful result, and standardize reproducible inputs before execution starts.
+PreFlight UI validates and packages inputs before they enter the core run workflow. Its job is to reduce failed runs, shorten time to first useful result, and standardize reproducible inputs before execution starts.
 
 ## Where to go next
 
 - Start with [Quickstart](./quickstart.md) if you need the fastest route to a first run.
 - Use [PreFlight UI](../preflight-ui/overview.md) if you need input validation and packaging guidance.
-- Use [Computational Safety Diligence](../computational-safety-diligence/overview.md) if you are ready to work through the core analysis surface.
+- Use [Computational Safety Diligence](../computational-safety-diligence/overview.md) if you are ready to work through the core analysis workflow.

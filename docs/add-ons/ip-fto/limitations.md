@@ -9,6 +9,4 @@ tags:
 
 # IP/FTO Limitations
 
-Coming soon.
-
-This page will document coverage limits, jurisdiction limits, known blind spots, and non-substitutive use boundaries for the IP/FTO add-on.
+Use this page to review coverage limits, jurisdiction limits, known blind spots, and the practical boundaries of the IP/FTO add-on.

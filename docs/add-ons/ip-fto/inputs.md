@@ -9,6 +9,4 @@ tags:
 
 # IP/FTO Inputs
 
-Coming soon.
-
-This page will document the required and optional inputs, source expectations, and readiness requirements for the IP/FTO add-on.
+Use this page to review the required and optional inputs, source expectations, and readiness requirements for the IP/FTO add-on.

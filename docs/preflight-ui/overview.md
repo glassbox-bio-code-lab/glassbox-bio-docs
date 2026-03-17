@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Entry point for the validation and submission-readiness product surface.
+description: Entry point for validating and preparing inputs before a run starts.
 sidebar_position: 1
 tags:
   - preflight
@@ -8,36 +8,35 @@ tags:
 
 # Overview
 
-PreFlight UI is the customer-boundary workflow surface for validating and packaging inputs before a target diligence run starts.
+PreFlight UI helps you validate and package inputs before a target diligence run starts.
 
 Its goal is operationally simple:
 
 - Reduce failed runs
 - Shorten time to first useful result
 - Standardize reproducible inputs
-- Hand validated submissions into the core analysis workflow cleanly
+- Prepare validated submissions for analysis
 
 ## What PreFlight UI produces
 
-PreFlight UI should leave the user with:
+After using PreFlight UI, you should have:
 
 - A validated input bundle
 - Clear pass, warning, or block status for the current package
 - Manifest-ready packaging that can hand off to the core run workflow
 - A smaller set of predictable operator failure modes
 
-## What belongs in this section
+## What you can do here
 
 - Input verification
 - Submission readiness
 - Error resolution workflow
 - Packaging rules and supported inputs
-- Handoff to core analysis
+- Handoff to analysis
 
-## What does not belong here
+## Next step
 
-This section should not carry the burden of post-run report interpretation. Once a submission is accepted and launched, the user should move to the core analysis documentation.
+Once validation is complete, continue with the core analysis docs to configure the run and interpret results:
 
-## Product positioning
-
-PreFlight UI is bundled with the core product, but it should be documented as a distinct workflow surface. Users need to understand that it certifies input readiness rather than replacing the downstream analysis engine.
+- [Create and Configure a Run](../computational-safety-diligence/create-and-configure-a-run.md)
+- [Interpret Results](../computational-safety-diligence/interpret-results.md)

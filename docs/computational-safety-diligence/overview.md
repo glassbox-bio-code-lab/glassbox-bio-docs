@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Entry point for the core analysis product and its report workflow.
+description: Entry point for running analyses and interpreting report outputs.
 sidebar_position: 1
 tags:
   - computational-safety-diligence
@@ -25,7 +25,7 @@ The `example_output/` bundle shows the major artifact families produced by the c
 
 This section explains how to read those outputs as one coherent system rather than as an unrelated file dump.
 
-## What belongs here
+## What you can do here
 
 - How a run is configured and categorized
 - How outputs are grouped and interpreted
@@ -33,11 +33,11 @@ This section explains how to read those outputs as one coherent system rather th
 - How plan resolution and missing-proof handling affect claim strength
 - How reproducibility and verification artifacts fit into the final package
 
-## What does not belong here
+## Related sections
 
-- Pre-submission validation mechanics that belong in PreFlight UI
-- Marketplace packaging and deployment concerns that belong in Deployment and Operations
-- Optional extension products that belong under Add-Ons
+- Use [PreFlight UI](../preflight-ui/overview.md) for input validation and submission readiness.
+- Use [Deployment and Operations](../deployment-and-operations/overview.md) for packaging, deployment, and runtime administration.
+- Use [Add-Ons](../add-ons/overview.md) for optional extension workflows.
 
 ## Recommended reading order
 

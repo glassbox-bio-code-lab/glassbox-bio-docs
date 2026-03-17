@@ -38,7 +38,7 @@ These are the module-native artifacts and should be treated as the closest layer
 - `results/failure_mode_ontology_output_v1.json`
 - `results/risk_channels_map.json`
 
-These files are the main interpretation surface.
+These files are the main outputs used for interpretation.
 
 ### Threshold and category artifacts
 

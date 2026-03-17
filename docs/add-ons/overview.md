@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: How optional capability layers fit into the Glassbox Bio platform.
+description: How optional extensions fit into the Glassbox Bio platform.
 sidebar_position: 1
 tags:
   - add-ons
@@ -8,6 +8,6 @@ tags:
 
 # Overview
 
-Coming soon.
+Add-Ons extend the main Glassbox Bio workflow with optional capabilities such as IP and freedom-to-operate review.
 
-Add-Ons are optional, customer-facing product extensions. This section will be expanded after the core pipeline and deployment documentation are complete.
+Use this section to understand what each add-on does, which inputs it needs, and how its outputs fit alongside the main analysis results.

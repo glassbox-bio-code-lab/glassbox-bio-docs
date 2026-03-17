@@ -8,11 +8,11 @@ tags:
 
 # Module Index
 
-The core analysis workflow is composed of internal module families that are selected based on project category, available evidence, and execution profile.
+The core analysis workflow uses different module families based on project category, available evidence, and execution profile.
 
-## Distinction to preserve
+## How modules differ from add-ons
 
-Modules are internal core-analysis subsystems. They are not the same as customer-facing add-ons.
+Modules are part of the main analysis workflow. They are not the same as add-ons, which extend the workflow with optional capabilities.
 
 ## Common module families
 

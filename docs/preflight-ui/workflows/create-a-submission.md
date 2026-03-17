@@ -8,17 +8,17 @@ tags:
 
 # Create a Submission
 
-Creating a submission in PreFlight UI should mirror the real operator path from staged inputs to a launch-ready bundle.
+Use this page to create a submission from staged inputs and turn it into a launch-ready bundle.
 
 ## Minimum information needed
 
-A usable submission should define:
+A usable submission defines:
 
 - The target project or run context
 - The input package located under the expected project-scoped path
 - The core manifest file `sources.json`
 - The selected portfolio file referenced by that manifest
-- Any optional supporting files that the workflow should validate and carry forward
+- Any optional supporting files that the workflow validates and carries forward
 
 ## Recommended setup sequence
 
@@ -30,7 +30,7 @@ A usable submission should define:
 
 ## Draft-state expectations
 
-Draft submissions should be allowed when the package is incomplete, but the UI should make the incomplete state obvious. A draft is useful for iterative setup. It should not be easy to mistake a draft for a validated run bundle.
+Draft submissions are useful when the package is incomplete, but the UI should make that state obvious. A draft should not be easy to mistake for a validated run bundle.
 
 ## Recommended submission modes
 
@@ -43,7 +43,7 @@ Both modes should collect the same core information and end in the same validati
 
 ## Inputs to collect up front
 
-At minimum, the UI should surface:
+At minimum, the UI should show:
 
 - Project identifier
 - Manifest location
@@ -67,6 +67,6 @@ If the workflow supports structured intake beyond the file picker, also collect:
 
 ## Authenticated versus unauthenticated submissions
 
-If the product supports signed-in users, a successful submission can create a trackable job record after intake. If the user is not signed in, the system should still allow submission or draft creation, but it should make clear what tracking and follow-up capabilities are unavailable.
+If the product supports signed-in users, a successful submission can create a trackable job record after intake. If the user is not signed in, the system can still allow submission or draft creation, but it should make clear which tracking and follow-up features are unavailable.
 
 For the exact file contract, see [Supported Inputs](../validation-system/supported-inputs.md).

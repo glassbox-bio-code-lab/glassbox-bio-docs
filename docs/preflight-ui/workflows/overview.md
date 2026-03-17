@@ -8,7 +8,7 @@ tags:
 
 # Workflows Overview
 
-PreFlight workflows should move users from raw inputs to a validated, manifest-ready bundle with as little ambiguity as possible.
+PreFlight workflows move users from raw inputs to a validated, manifest-ready bundle with as little ambiguity as possible.
 
 ## Workflow sequence
 
@@ -23,12 +23,12 @@ This sequence keeps packaging, certification, and execution separate, which is e
 
 ## Workflow outcomes
 
-At the end of the PreFlight workflow, the user should have:
+At the end of the PreFlight workflow, you should have:
 
 - a validated input bundle
 - explicit status for the package
 - clear visibility into warnings versus blockers
-- a manifest-ready package that can be deployed into the customer environment
+- a manifest-ready package that can be deployed into the run environment
 
 ## Core workflow pages
 

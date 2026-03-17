@@ -8,7 +8,7 @@ tags:
 
 # Validation System Overview
 
-The validation system is the decision engine behind Glassbox Preflight Certifier. It inspects a staged submission, classifies its problems, and determines whether the package is ready to hand off to core analysis.
+The validation system is the decision engine behind Glassbox Preflight Certifier. It inspects a staged submission, classifies its problems, and determines whether the package is ready for analysis.
 
 ## What the validation system does
 
@@ -25,11 +25,11 @@ The validation layer is responsible for:
 
 The system exists to reduce failed runs and standardize reproducible inputs before compute starts.
 
-Instead of letting packaging mistakes fail deep in the runtime path, PreFlight Certifier catches them at the customer boundary and turns them into actionable corrections.
+Instead of letting packaging mistakes fail deep in the runtime path, PreFlight Certifier catches them early and turns them into actionable corrections.
 
 ## Validation outputs
 
-The validation system should produce:
+The validation system produces:
 
 - a package status of ready, warning, or blocked
 - machine-stable rule identifiers
@@ -44,6 +44,6 @@ The validation system should produce:
 - [Eligibility and Readiness Checks](./eligibility-and-readiness-checks.md)
 - [Troubleshooting](./troubleshooting.md)
 
-## Boundary of responsibility
+## What validation covers
 
-The validation system certifies input readiness. It does not certify scientific truth, replace module planning, or interpret final outputs. Once the bundle is accepted, responsibility shifts to the core analysis workflow.
+The validation system confirms that the input package is structurally ready for analysis. It does not evaluate scientific correctness or interpret analysis results. After a package is accepted, continue with the run configuration and results documentation.

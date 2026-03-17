@@ -1,5 +1,5 @@
 ---
-title: INC-Overview
+title: Overview
 description: How release notes are organized across the platform.
 sidebar_position: 1
 tags:
@@ -8,4 +8,4 @@ tags:
 
 # Release Notes Overview
 
-Release notes should be split by product surface so users can quickly find what affects them.
+Release notes are grouped by area so you can quickly find the changes that affect your workflow.

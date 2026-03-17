@@ -8,11 +8,11 @@ tags:
 
 # Reference Overview
 
-This section is the stable lookup surface for artifact names, schema families, config keys, and interface expectations.
+This section is the stable lookup area for artifact names, schema families, config keys, and interface expectations.
 
 ## What this section covers
 
-- API surfaces used by the pipeline and entitlement flow
+- API endpoints used by the pipeline and entitlement flow
 - configuration keys and runtime controls
 - emitted file paths and artifact families
 - schema families visible in the example output bundle
