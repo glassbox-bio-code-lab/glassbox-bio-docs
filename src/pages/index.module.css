@@ -1,12 +1,13 @@
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 5.5rem 0 4.5rem;
+  text-align: left;
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at top, rgba(37, 151, 207, 0.2), transparent 35%),
-    linear-gradient(180deg, #0a0a0a 0%, #111111 55%, #0a0a0a 100%);
-  border-bottom: 1px solid var(--border-color);
+    radial-gradient(circle at top right, rgba(212, 168, 83, 0.1), transparent 32%),
+    radial-gradient(circle at top left, rgba(74, 175, 224, 0.12), transparent 30%),
+    linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 52%, #0a0a0a 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .homeLayout {
@@ -34,17 +35,26 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(circle at center, black, transparent 80%);
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black, transparent 84%);
   pointer-events: none;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 0 2.5rem;
   }
+}
+
+.heroEyebrow {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 997px) {
@@ -66,21 +76,27 @@
 }
 
 .heroTitle {
-  font-size: 2rem;
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 5vw, 4.1rem);
+  font-weight: 300;
   letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 1rem;
 }
 
 .heroSubtitle {
-  margin: 0 auto 1.25rem;
-  max-width: 680px;
-  color: var(--text-secondary);
+  margin: 0 0 1.75rem;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.45);
   font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
 }
 
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.75rem;
   flex-wrap: wrap;
   position: relative;
