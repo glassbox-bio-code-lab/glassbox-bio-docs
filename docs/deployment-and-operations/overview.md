@@ -14,7 +14,7 @@ The public deployment bundle is organized around:
 
 - a Helm chart under `manifest/chart/`
 - a Marketplace schema in `schema.yaml`
-- an Application CR in `manifest/application.yaml`
+- an Application manifest in `manifest/application.yaml`
 - example values for PVC, GCS, entitlement, and billing settings
 - customer operational docs
 

@@ -53,11 +53,14 @@ export IMAGE_TAG="PUBLISHED_VERSION_TAG"
 export PROJECT_ID="test"
 export RUN_ID="run_$(date +%Y%m%dT%H%M%SZ)"
 
+export GCP_REGION="us-central1"
+export GCP_LOCATION="${GCP_REGION}"
 export ENTITLEMENT_URL="https://YOUR_CLOUD_RUN_SERVICE"
 export ENTITLEMENT_AUTH_MODE="google"
 export ENTITLEMENT_AUDIENCE="${ENTITLEMENT_URL}"
 export WORKLOAD_IDENTITY_GSA="your-sa@project.iam.gserviceaccount.com"
 export REPORTING_SECRET="marketplace-reporting-secret"
+export UBBAGENT_IMAGE_REPO="us-docker.pkg.dev/glassbox-bio-public/glassbox-bio-molecular-audit/glassbox-mol-audit/ubbagent"
 ```
 
 ### 2. Create the namespace
@@ -78,6 +81,8 @@ helm upgrade --install "${APP_NAME}" ./manifest/chart \
   --set image.repository="${IMAGE_REPO}" \
   --set image.tag="${IMAGE_TAG}" \
   --set config.projectId="${PROJECT_ID}" \
+  --set config.gcpRegion="${GCP_REGION}" \
+  --set config.gcpLocation="${GCP_LOCATION}" \
   --set config.entitlementUrl="${ENTITLEMENT_URL}" \
   --set config.entitlementAuthMode="${ENTITLEMENT_AUTH_MODE}" \
   --set config.entitlementAudience="${ENTITLEMENT_AUDIENCE}" \
@@ -85,6 +90,7 @@ helm upgrade --install "${APP_NAME}" ./manifest/chart \
   --set workloadIdentity.gcpServiceAccount="${WORKLOAD_IDENTITY_GSA}" \
   --set marketplace.reportingSecret="${REPORTING_SECRET}" \
   --set ubbagent.enabled=true \
+  --set ubbagent.image.repository="${UBBAGENT_IMAGE_REPO}" \
   --set config.runId="${RUN_ID}"
 ```
 
@@ -123,6 +129,8 @@ helm upgrade --install "${APP_NAME}" ./manifest/chart \
   --set image.repository="${IMAGE_REPO}" \
   --set image.tag="${IMAGE_TAG}" \
   --set config.projectId="${PROJECT_ID}" \
+  --set config.gcpRegion="${GCP_REGION}" \
+  --set config.gcpLocation="${GCP_LOCATION}" \
   --set config.entitlementUrl="${ENTITLEMENT_URL}" \
   --set config.entitlementAuthMode="${ENTITLEMENT_AUTH_MODE}" \
   --set config.entitlementAudience="${ENTITLEMENT_AUDIENCE}" \
@@ -130,6 +138,7 @@ helm upgrade --install "${APP_NAME}" ./manifest/chart \
   --set workloadIdentity.gcpServiceAccount="${WORKLOAD_IDENTITY_GSA}" \
   --set marketplace.reportingSecret="${REPORTING_SECRET}" \
   --set ubbagent.enabled=true \
+  --set ubbagent.image.repository="${UBBAGENT_IMAGE_REPO}" \
   --set config.runId="${RUN_ID}"
 ```
 

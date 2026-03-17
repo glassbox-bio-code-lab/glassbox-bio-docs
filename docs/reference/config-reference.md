@@ -15,6 +15,8 @@ This page captures the most important chart values and runtime settings used in 
 | `config.projectId` | `test` | Resolves the input directory name under the input root |
 | `config.runId` | `run_20260307T010203Z` | Forces outputs into a stable run-scoped directory |
 | `config.runMode` | `standard` or `deep` | Selects the execution profile and billing metric |
+| `config.gcpRegion` | `us-central1` | Primary deployment region for locality-aware installs |
+| `config.gcpLocation` | `us-central1` or a broader location string | Explicit location when install topology needs a separate location value |
 | `config.inputPath` | `/data/input` | Root path used to discover `<project_id>/01_sources/` |
 | `config.outputPath` | `/data/output` | Root path where run-scoped outputs are written |
 
@@ -25,7 +27,7 @@ This page captures the most important chart values and runtime settings used in 
 | `config.entitlementUrl` | `https://YOUR_CLOUD_RUN_SERVICE` | Base URL for the entitlement and seal API |
 | `config.entitlementAuthMode` | `google` | Enables identity-based auth for the customer job |
 | `config.entitlementAudience` | same as entitlement URL | Audience used when minting the identity token |
-| `config.entitlementPrincipal` | `local-dev` | Local or test principal for non-Google development flows |
+| `config.entitlementTimeoutSec` | `20` | HTTP timeout budget used for entitlement and seal calls |
 
 For the customer deployment path, prefer `config.entitlementAuthMode=google`.
 
@@ -50,7 +52,9 @@ For the customer deployment path, prefer `config.entitlementAuthMode=google`.
 | Key | Type or example | Purpose |
 | --- | --- | --- |
 | `marketplace.reportingSecret` | Kubernetes Secret reference | Injects the Marketplace reporting credential |
+| `marketplace.partnerSolutionLabel` | partner label string | Applies the Marketplace partner label to deployed resources |
 | `ubbagent.enabled` | `true` | Keeps Marketplace metering enabled in supported deployments |
+| `ubbagent.image.repository` | published `ubbagent` image repo | Supplies the required reporting sidecar image |
 | `ubbagent.metricName` | `standard_audit_run` | Legacy hard override for usage metric selection |
 | `ubbagent.metricNameStandard` | `standard_audit_run` | Explicit Standard metric name |
 | `ubbagent.metricNameDeep` | `deep_audit_run` | Explicit Deep metric name |

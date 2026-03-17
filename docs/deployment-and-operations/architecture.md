@@ -19,7 +19,7 @@ The Helm chart under `manifest/chart/` is the primary deployment unit. It define
 - storage mode selection
 - service account and Workload Identity wiring
 - resource profile selection
-- reserved console values that stay disabled in the current supported bundle
+- the Marketplace `Application` object and related Kubernetes resources used by the supported customer bundle
 
 ### Kubernetes Job
 
@@ -58,7 +58,7 @@ The Marketplace reporting sidecar is required for the supported Marketplace-mete
 
 ### Console
 
-Some chart values reserve a future console surface, but the current supported customer bundle does not deploy console resources.
+The current supported customer bundle does not deploy console resources.
 
 ## Architecture boundaries
 

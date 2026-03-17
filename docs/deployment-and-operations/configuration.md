@@ -17,7 +17,6 @@ The base chart values define the default runtime contract for:
 - images
 - config and run behavior
 - Marketplace reporting through required `ubbagent`
-- reserved console values
 - resources
 - storage
 - service account and Workload Identity
@@ -47,6 +46,8 @@ Key runtime settings include:
 
 - `config.projectId`
 - `config.runMode`
+- `config.gcpRegion`
+- `config.gcpLocation`
 - `config.inputPath`
 - `config.outputPath`
 - `config.runId`
@@ -61,8 +62,7 @@ The key entitlement settings are:
 - `config.entitlementUrl`
 - `config.entitlementAuthMode`
 - `config.entitlementAudience`
-- `config.entitlementBearerToken`
-- `config.entitlementPrincipal`
+- `config.entitlementTimeoutSec`
 
 For customer deployments, the preferred path is identity-based auth with `config.entitlementAuthMode=google`.
 
@@ -81,7 +81,9 @@ Storage is selected with:
 Marketplace reporting is controlled with:
 
 - `marketplace.reportingSecret`
+- `marketplace.partnerSolutionLabel`
 - `ubbagent.enabled`
+- `ubbagent.image.repository`
 - `ubbagent.metricName`
 - `ubbagent.metricNameStandard`
 - `ubbagent.metricNameDeep`
@@ -101,7 +103,6 @@ The Workload Identity path is controlled with:
 - Use image digests for production-stable releases whenever possible
 - Treat Standard and Deep as distinct deployment profiles, not cosmetic variants
 - Do not treat Standard or Deep as a substitute for category selection or module-policy review
-- Keep `console.enabled=false` in supported deployments because the current customer bundle does not deploy console resources
 - Use `job.enabled=false` for infrastructure-first installs, then enable the Job explicitly
 
 For the field-level reference, see [Config Reference](../reference/config-reference.md).

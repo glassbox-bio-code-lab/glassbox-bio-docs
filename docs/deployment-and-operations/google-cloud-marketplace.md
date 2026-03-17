@@ -65,12 +65,16 @@ helm upgrade --install glassbox-mol-audit ./manifest/chart \
   --namespace glassbox-mol-audit --create-namespace \
   --set image.repository=REGION-docker.pkg.dev/PROJECT/REPO/glassbox-mol-audit \
   --set image.tag=1.0.0 \
+  --set config.gcpRegion=us-central1 \
+  --set config.gcpLocation=us-central1 \
+  --set config.categoryId=REPLACE_CATEGORY_ID \
   --set storage.type=gcs \
   --set storage.gcs.bucket=YOUR_BUCKET \
   --set workloadIdentity.enabled=true \
   --set workloadIdentity.gcpServiceAccount=your-sa@project.iam.gserviceaccount.com \
   --set marketplace.reportingSecret=marketplace-reporting-secret \
-  --set ubbagent.enabled=true
+  --set ubbagent.enabled=true \
+  --set ubbagent.image.repository=us-docker.pkg.dev/glassbox-bio-public/glassbox-bio-molecular-audit/glassbox-mol-audit/ubbagent
 ```
 
 ### Smoke test
