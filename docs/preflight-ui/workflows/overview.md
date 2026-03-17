@@ -2,8 +2,6 @@
 title: Overview
 description: User workflows inside PreFlight UI from draft submission to handoff.
 sidebar_position: 1
-tags:
-  - preflight
 ---
 
 # Workflows Overview

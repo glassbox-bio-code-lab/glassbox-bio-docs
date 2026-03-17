@@ -2,8 +2,6 @@
 title: Overview
 description: Entry point for security, data boundaries, provenance, and trust posture.
 sidebar_position: 1
-tags:
-  - security
 ---
 
 # Overview

@@ -2,8 +2,6 @@
 title: Overview
 description: Entry point for running analyses and interpreting report outputs.
 sidebar_position: 1
-tags:
-  - computational-safety-diligence
 ---
 
 # Overview

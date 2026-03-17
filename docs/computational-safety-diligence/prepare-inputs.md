@@ -2,8 +2,6 @@
 title: Prepare Inputs
 description: How to assemble input packages for core analysis.
 sidebar_position: 5
-tags:
-  - computational-safety-diligence
 ---
 
 # Prepare Inputs

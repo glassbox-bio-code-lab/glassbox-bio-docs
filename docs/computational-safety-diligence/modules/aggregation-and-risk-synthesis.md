@@ -2,8 +2,6 @@
 title: Aggregation and Risk Synthesis
 description: How module-level signals combine into system-level outputs.
 sidebar_position: 7
-tags:
-  - computational-safety-diligence
 ---
 
 # Aggregation and Risk Synthesis

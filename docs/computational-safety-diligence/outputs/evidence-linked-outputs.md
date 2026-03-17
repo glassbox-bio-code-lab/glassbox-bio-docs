@@ -2,8 +2,6 @@
 title: Evidence-Linked Outputs
 description: How findings connect back to source evidence and provenance.
 sidebar_position: 6
-tags:
-  - computational-safety-diligence
 ---
 
 # Evidence-Linked Outputs

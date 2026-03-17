@@ -2,8 +2,6 @@
 title: Platform
 description: Cross-platform releases affecting multiple workflows or shared infrastructure.
 sidebar_position: 2
-tags:
-  - release-notes
 ---
 
 # Platform Release Notes

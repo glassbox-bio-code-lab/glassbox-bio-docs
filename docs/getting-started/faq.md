@@ -2,8 +2,6 @@
 title: FAQ
 description: Common orientation questions for new users and evaluators.
 sidebar_position: 6
-tags:
-  - platform
 ---
 
 # FAQ

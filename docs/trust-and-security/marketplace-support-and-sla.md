@@ -2,10 +2,6 @@
 title: Marketplace Support and SLA
 description: Support scope and response targets for Marketplace deployments.
 sidebar_position: 15
-tags:
-  - security
-  - marketplace
-  - support
 ---
 
 # Marketplace Support and SLA

@@ -2,8 +2,6 @@
 title: INC-Standard vs Deep
 description: Decision guidance for the primary analysis tiers.
 sidebar_position: 3
-tags:
-  - computational-safety-diligence
 ---
 
 # Standard vs Deep

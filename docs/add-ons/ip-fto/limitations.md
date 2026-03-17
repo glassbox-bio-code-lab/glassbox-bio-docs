@@ -2,9 +2,6 @@
 title: Limitations
 description: Known boundaries and caveats for IP/FTO analysis.
 sidebar_position: 6
-tags:
-  - add-ons
-  - ip-fto
 ---
 
 # IP/FTO Limitations

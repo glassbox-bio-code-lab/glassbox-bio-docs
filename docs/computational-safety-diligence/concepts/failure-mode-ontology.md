@@ -2,8 +2,6 @@
 title: Failure-Mode Ontology
 description: The taxonomy of failure signals tracked by the core analysis product.
 sidebar_position: 3
-tags:
-  - computational-safety-diligence
 ---
 
 # Failure-Mode Ontology

@@ -2,8 +2,6 @@
 title: Validate Inputs
 description: How users run validation checks and interpret initial results.
 sidebar_position: 3
-tags:
-  - preflight
 ---
 
 # Validate Inputs

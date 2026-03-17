@@ -2,8 +2,6 @@
 title: Missing Proof Detection
 description: How the system treats absent, incomplete, or insufficient supporting data.
 sidebar_position: 6
-tags:
-  - computational-safety-diligence
 ---
 
 # Missing Proof Detection

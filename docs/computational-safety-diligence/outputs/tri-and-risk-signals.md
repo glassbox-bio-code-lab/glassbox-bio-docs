@@ -2,8 +2,6 @@
 title: TRI and Risk Signals
 description: How to read the Translational Risk Index and related risk indicators.
 sidebar_position: 4
-tags:
-  - computational-safety-diligence
 ---
 
 # TRI and Risk Signals

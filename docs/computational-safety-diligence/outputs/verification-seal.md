@@ -2,8 +2,6 @@
 title: Verification Seal
 description: How the seal works and what claims it supports.
 sidebar_position: 8
-tags:
-  - computational-safety-diligence
 ---
 
 # Verification Seal

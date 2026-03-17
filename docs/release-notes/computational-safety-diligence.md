@@ -2,8 +2,6 @@
 title: INC-Computational Safety Diligence
 description: Release history for the core analysis product.
 sidebar_position: 3
-tags:
-  - release-notes
 ---
 
 # Computational Safety Diligence Release Notes

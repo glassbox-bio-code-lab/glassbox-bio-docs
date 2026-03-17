@@ -2,8 +2,6 @@
 title: Overview
 description: How release notes are organized across the platform.
 sidebar_position: 1
-tags:
-  - release-notes
 ---
 
 # Release Notes Overview

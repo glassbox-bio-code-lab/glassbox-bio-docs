@@ -2,8 +2,6 @@
 title: Kubernetes and Helm
 description: Cluster deployment details and chart-level guidance.
 sidebar_position: 5
-tags:
-  - deployment
 ---
 
 # Kubernetes and Helm

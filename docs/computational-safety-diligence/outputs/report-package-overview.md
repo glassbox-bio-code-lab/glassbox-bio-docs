@@ -2,8 +2,6 @@
 title: Report Package Overview
 description: What is included in a completed analysis package.
 sidebar_position: 2
-tags:
-  - computational-safety-diligence
 ---
 
 # Report Package Overview

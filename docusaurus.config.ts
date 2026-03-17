@@ -138,16 +138,20 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Overview",
+              label: "Docs Home",
               to: "/docs/",
             },
             {
-              label: "Deployment Guide",
-              to: "/docs/DEPLOYMENT_GUIDE",
+              label: "Getting Started",
+              to: "/docs/getting-started",
             },
             {
-              label: "API Test Commands",
-              to: "/docs/API_TEST_COMMANDS",
+              label: "Deployment & Operations",
+              to: "/docs/deployment-and-operations",
+            },
+            {
+              label: "Reference",
+              to: "/docs/reference",
             },
           ],
         },

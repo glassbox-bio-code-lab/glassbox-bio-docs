@@ -2,8 +2,6 @@
 title: Choose Your Surface
 description: Help readers find the correct docs path based on their immediate goal.
 sidebar_position: 4
-tags:
-  - platform
 ---
 
 # Choose Your Surface

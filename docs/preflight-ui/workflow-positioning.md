@@ -2,8 +2,6 @@
 title: Workflow Positioning
 description: Where PreFlight UI sits in the overall user journey.
 sidebar_position: 2
-tags:
-  - preflight
 ---
 
 # Workflow Positioning

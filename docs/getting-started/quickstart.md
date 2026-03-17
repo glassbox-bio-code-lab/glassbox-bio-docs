@@ -2,8 +2,6 @@
 title: Quickstart
 description: Fastest path from initial setup to a valid first run.
 sidebar_position: 5
-tags:
-  - platform
 ---
 
 # Quickstart

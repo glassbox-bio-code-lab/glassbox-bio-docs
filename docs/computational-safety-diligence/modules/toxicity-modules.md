@@ -2,8 +2,6 @@
 title: Toxicity Modules
 description: Pages for toxicity and safety-signal module families.
 sidebar_position: 4
-tags:
-  - computational-safety-diligence
 ---
 
 # Toxicity Modules

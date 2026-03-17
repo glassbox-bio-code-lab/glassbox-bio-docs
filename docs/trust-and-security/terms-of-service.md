@@ -2,9 +2,6 @@
 title: Terms of Service
 description: Direct-service terms summary for Glassbox Bio products and related services.
 sidebar_position: 9
-tags:
-  - security
-  - legal
 ---
 
 # Terms of Service

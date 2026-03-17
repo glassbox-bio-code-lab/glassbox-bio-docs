@@ -2,8 +2,6 @@
 title: Overview
 description: Entry point for validating and preparing inputs before a run starts.
 sidebar_position: 1
-tags:
-  - preflight
 ---
 
 # Overview

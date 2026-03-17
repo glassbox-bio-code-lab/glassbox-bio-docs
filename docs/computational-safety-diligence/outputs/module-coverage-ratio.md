@@ -2,8 +2,6 @@
 title: Module Coverage Ratio
 description: How to read coverage, ineligibility, and missingness in the output package.
 sidebar_position: 5
-tags:
-  - computational-safety-diligence
 ---
 
 # Module Coverage Ratio

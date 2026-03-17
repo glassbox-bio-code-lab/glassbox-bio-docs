@@ -2,8 +2,6 @@
 title: Evidence IDs
 description: How evidence identifiers and provenance links are structured.
 sidebar_position: 4
-tags:
-  - computational-safety-diligence
 ---
 
 # Evidence IDs

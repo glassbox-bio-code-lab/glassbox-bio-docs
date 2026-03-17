@@ -2,8 +2,6 @@
 title: Fast-Fail Summary
 description: How to interpret the fastest no-go or escalation signals.
 sidebar_position: 3
-tags:
-  - computational-safety-diligence
 ---
 
 # Fast-Fail Summary

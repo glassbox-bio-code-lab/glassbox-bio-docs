@@ -2,8 +2,6 @@
 title: End-to-End Workflow
 description: Recommended lifecycle from preparation to decision-making.
 sidebar_position: 3
-tags:
-  - platform
 ---
 
 # End-to-End Workflow

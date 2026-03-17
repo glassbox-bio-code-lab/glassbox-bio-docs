@@ -3,8 +3,6 @@ title: Glassbox Bio Documentation
 description: Overview of the Glassbox Bio platform, including Computational Safety Diligence, PreFlight UI, and add-ons.
 sidebar_position: 1
 slug: /
-tags:
-  - platform
 ---
 
 # Glassbox Bio Documentation

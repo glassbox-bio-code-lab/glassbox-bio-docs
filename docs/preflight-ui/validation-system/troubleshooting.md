@@ -2,8 +2,6 @@
 title: Troubleshooting
 description: Common PreFlight issues and how to resolve them.
 sidebar_position: 5
-tags:
-  - preflight
 ---
 
 # Troubleshooting

@@ -2,8 +2,6 @@
 title: Overview
 description: How optional extensions fit into the Glassbox Bio platform.
 sidebar_position: 1
-tags:
-  - add-ons
 ---
 
 # Overview

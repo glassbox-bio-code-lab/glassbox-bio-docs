@@ -2,8 +2,6 @@
 title: Create and Configure a Run
 description: How a user initiates and configures core analysis.
 sidebar_position: 4
-tags:
-  - computational-safety-diligence
 ---
 
 # Create and Configure a Run

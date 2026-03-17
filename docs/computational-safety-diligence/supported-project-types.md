@@ -2,8 +2,6 @@
 title: Supported Project Types
 description: What kinds of projects and input packages can be analyzed.
 sidebar_position: 2
-tags:
-  - computational-safety-diligence
 ---
 
 # Supported Project Types

@@ -2,8 +2,6 @@
 title: Overview
 description: Start here to understand the main workflows, recommended reading order, and first actions.
 sidebar_position: 1
-tags:
-  - platform
 ---
 
 # Overview

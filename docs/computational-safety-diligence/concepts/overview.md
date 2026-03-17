@@ -2,8 +2,6 @@
 title: Overview
 description: Conceptual foundations for how core analysis works and should be interpreted.
 sidebar_position: 1
-tags:
-  - computational-safety-diligence
 ---
 
 # Concepts Overview

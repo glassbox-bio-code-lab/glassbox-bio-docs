@@ -2,9 +2,6 @@
 title: Billing Terms
 description: Direct-service billing, invoicing, and payment rules.
 sidebar_position: 10
-tags:
-  - security
-  - billing
 ---
 
 # Billing Terms

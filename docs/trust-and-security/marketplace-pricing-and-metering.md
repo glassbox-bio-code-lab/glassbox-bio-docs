@@ -2,10 +2,6 @@
 title: Marketplace Pricing and Metering
 description: Pricing and metering summary for Google Cloud Marketplace deployments.
 sidebar_position: 14
-tags:
-  - security
-  - marketplace
-  - billing
 ---
 
 # Marketplace Pricing and Metering

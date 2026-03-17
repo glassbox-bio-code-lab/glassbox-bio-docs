@@ -2,8 +2,6 @@
 title: Auditability
 description: How a reviewer can verify what happened in a run.
 sidebar_position: 5
-tags:
-  - security
 ---
 
 # Auditability

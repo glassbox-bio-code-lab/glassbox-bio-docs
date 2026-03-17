@@ -2,8 +2,6 @@
 title: Security Overview
 description: High-level security model and control areas.
 sidebar_position: 2
-tags:
-  - security
 ---
 
 # Security Overview

@@ -2,8 +2,6 @@
 title: Resolve Validation Errors
 description: How to fix blockers and warnings before submission.
 sidebar_position: 4
-tags:
-  - preflight
 ---
 
 # Resolve Validation Errors

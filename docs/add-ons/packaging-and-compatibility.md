@@ -2,8 +2,6 @@
 title: Packaging and Compatibility
 description: How add-ons are packaged, enabled, and constrained.
 sidebar_position: 2
-tags:
-  - add-ons
 ---
 
 # Packaging and Compatibility

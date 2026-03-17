@@ -2,9 +2,6 @@
 title: Refund Policy
 description: Refund and chargeback rules for digital audit services.
 sidebar_position: 11
-tags:
-  - security
-  - billing
 ---
 
 # Refund Policy

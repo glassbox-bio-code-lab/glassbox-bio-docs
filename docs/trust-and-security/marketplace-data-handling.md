@@ -2,10 +2,6 @@
 title: Marketplace Data Handling
 description: Data handling terms for Google Cloud Marketplace deployments.
 sidebar_position: 12
-tags:
-  - security
-  - privacy
-  - marketplace
 ---
 
 # Marketplace Data Handling

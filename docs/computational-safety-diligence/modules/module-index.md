@@ -2,8 +2,6 @@
 title: Module Index
 description: Index of module families and their role in the analysis stack.
 sidebar_position: 2
-tags:
-  - computational-safety-diligence
 ---
 
 # Module Index

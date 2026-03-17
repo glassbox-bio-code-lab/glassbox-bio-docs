@@ -2,8 +2,6 @@
 title: Platform Overview
 description: High-level map of Computational Safety Diligence, PreFlight UI, and Add-Ons.
 sidebar_position: 2
-tags:
-  - platform
 ---
 
 # Platform Overview

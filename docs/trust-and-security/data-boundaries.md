@@ -2,8 +2,6 @@
 title: Data Boundaries
 description: What data the system touches and where the trust boundaries sit.
 sidebar_position: 3
-tags:
-  - security
 ---
 
 # Data Boundaries

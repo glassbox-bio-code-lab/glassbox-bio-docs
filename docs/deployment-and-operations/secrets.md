@@ -2,8 +2,6 @@
 title: Secrets
 description: How secrets are managed across platform components.
 sidebar_position: 7
-tags:
-  - deployment
 ---
 
 # Secrets

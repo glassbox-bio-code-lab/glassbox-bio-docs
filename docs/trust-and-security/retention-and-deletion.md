@@ -2,8 +2,6 @@
 title: Retention and Deletion
 description: How long data persists and how deletion requests are handled.
 sidebar_position: 6
-tags:
-  - security
 ---
 
 # Retention and Deletion

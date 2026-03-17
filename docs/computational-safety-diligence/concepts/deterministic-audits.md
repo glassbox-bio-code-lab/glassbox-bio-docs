@@ -2,8 +2,6 @@
 title: Deterministic Audits
 description: What deterministic audit behavior means in the context of the product.
 sidebar_position: 2
-tags:
-  - computational-safety-diligence
 ---
 
 # Deterministic Audits

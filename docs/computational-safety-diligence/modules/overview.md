@@ -2,8 +2,6 @@
 title: Overview
 description: How module families are organized inside the core analysis product.
 sidebar_position: 1
-tags:
-  - computational-safety-diligence
 ---
 
 # Modules Overview

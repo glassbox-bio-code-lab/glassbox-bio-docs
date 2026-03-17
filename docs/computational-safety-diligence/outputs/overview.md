@@ -2,8 +2,6 @@
 title: Overview
 description: Map of the core output package and how each artifact should be used.
 sidebar_position: 1
-tags:
-  - computational-safety-diligence
 ---
 
 # Outputs Overview

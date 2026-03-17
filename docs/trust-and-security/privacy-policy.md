@@ -2,9 +2,6 @@
 title: Privacy Policy
 description: Direct-service privacy policy summary for Glassbox Bio documentation users.
 sidebar_position: 8
-tags:
-  - security
-  - privacy
 ---
 
 # Privacy Policy

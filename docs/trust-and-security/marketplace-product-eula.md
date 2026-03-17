@@ -2,10 +2,6 @@
 title: Marketplace Product EULA
 description: Summary of the Google Cloud Marketplace product EULA for Glassbox deployments.
 sidebar_position: 13
-tags:
-  - security
-  - legal
-  - marketplace
 ---
 
 # Marketplace Product EULA

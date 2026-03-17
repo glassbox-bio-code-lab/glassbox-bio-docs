@@ -2,8 +2,6 @@
 title: Configuration
 description: Platform configuration surfaces and recommended defaults.
 sidebar_position: 6
-tags:
-  - deployment
 ---
 
 # Configuration

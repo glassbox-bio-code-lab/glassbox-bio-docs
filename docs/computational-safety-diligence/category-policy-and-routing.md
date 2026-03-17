@@ -2,8 +2,6 @@
 title: Category Policy and Routing
 description: How the pipeline resolves category IDs and uses them to gate module eligibility.
 sidebar_position: 3
-tags:
-  - computational-safety-diligence
 ---
 
 # Category Policy and Routing

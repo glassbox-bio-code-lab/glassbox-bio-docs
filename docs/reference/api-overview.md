@@ -2,8 +2,6 @@
 title: API Overview
 description: Summary of the externally exposed APIs.
 sidebar_position: 2
-tags:
-  - reference
 ---
 
 # API Overview
