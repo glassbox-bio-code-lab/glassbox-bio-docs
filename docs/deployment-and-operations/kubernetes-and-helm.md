@@ -18,6 +18,7 @@ This page is the operator-facing runbook for deploying the job on Kubernetes wit
   - PVC mode with a usable `StorageClass`
   - GCS mode on GKE with the GCS Fuse CSI driver enabled
 - Workload Identity is configured when the job must call the entitlement service with Google identity
+- A valid Marketplace reporting secret reference is available for supported Marketplace deployments
 
 If you need to install the Kubernetes Application CRD used by some Marketplace flows:
 
@@ -56,6 +57,7 @@ export ENTITLEMENT_URL="https://YOUR_CLOUD_RUN_SERVICE"
 export ENTITLEMENT_AUTH_MODE="google"
 export ENTITLEMENT_AUDIENCE="${ENTITLEMENT_URL}"
 export WORKLOAD_IDENTITY_GSA="your-sa@project.iam.gserviceaccount.com"
+export REPORTING_SECRET="marketplace-reporting-secret"
 ```
 
 ### 2. Create the namespace
@@ -81,6 +83,8 @@ helm upgrade --install "${APP_NAME}" ./manifest/chart \
   --set config.entitlementAudience="${ENTITLEMENT_AUDIENCE}" \
   --set workloadIdentity.enabled=true \
   --set workloadIdentity.gcpServiceAccount="${WORKLOAD_IDENTITY_GSA}" \
+  --set marketplace.reportingSecret="${REPORTING_SECRET}" \
+  --set ubbagent.enabled=true \
   --set config.runId="${RUN_ID}"
 ```
 
@@ -124,6 +128,8 @@ helm upgrade --install "${APP_NAME}" ./manifest/chart \
   --set config.entitlementAudience="${ENTITLEMENT_AUDIENCE}" \
   --set workloadIdentity.enabled=true \
   --set workloadIdentity.gcpServiceAccount="${WORKLOAD_IDENTITY_GSA}" \
+  --set marketplace.reportingSecret="${REPORTING_SECRET}" \
+  --set ubbagent.enabled=true \
   --set config.runId="${RUN_ID}"
 ```
 
@@ -167,9 +173,11 @@ helm upgrade --install glassbox-mol-audit ./manifest/chart \
   --set image.repository=us-central1-docker.pkg.dev/PROJECT/REPO/glassbox-mol-audit \
   --set image.tag=1.0.0 \
   --set config.projectId=YOUR_PROJECT_ID \
-  --set ubbagent.enabled=false \
-  --set marketplace.reportingSecret=""
+  --set marketplace.reportingSecret=marketplace-reporting-secret \
+  --set ubbagent.enabled=true
 ```
+
+Supported Marketplace deployments keep billing enabled. Do not blank `marketplace.reportingSecret` or disable `ubbagent` in the customer path.
 
 ## Identity-only entitlement flow
 

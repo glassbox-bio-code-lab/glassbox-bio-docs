@@ -10,15 +10,15 @@ This section covers the deployable customer-facing runtime bundle for Glassbox B
 
 ## What this section is about
 
-The source deployment bundle under `gbx_marketplace_cloud_customer_docs/` is organized around:
+The public deployment bundle is organized around:
 
 - a Helm chart under `manifest/chart/`
 - a Marketplace schema in `schema.yaml`
 - an Application CR in `manifest/application.yaml`
-- example values for PVC, GCS, and entitlement settings
-- customer and reviewer operational docs
+- example values for PVC, GCS, entitlement, and billing settings
+- customer operational docs
 
-These pages explain how those pieces fit together in production and review environments.
+These pages explain how those pieces fit together in the supported customer deployment path.
 
 ## Supported deployment model
 
@@ -28,7 +28,7 @@ The current supported customer path is a Kubernetes Job deployed by Helm, with:
 - PVC storage by default
 - optional GCS Fuse storage on GKE
 - identity-based entitlement checks through the Entitlement + Seal API
-- optional Marketplace usage reporting through `ubbagent`
+- required Marketplace usage reporting through `ubbagent`
 
 ## Recommended reading order
 

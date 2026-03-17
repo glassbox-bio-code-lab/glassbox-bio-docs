@@ -53,9 +53,9 @@ instead of storing a customer entitlement token in a Kubernetes Secret.
 
 ## Operational notes
 
-When billing is disabled for reviewer testing:
+Supported Marketplace deployments require:
 
-- `ubbagent.enabled: false`
-- `marketplace.reportingSecret: ""`
+- `ubbagent.enabled: true`
+- a non-empty `marketplace.reportingSecret` bound to valid reporting material
 
-In that mode, no reporting secret should be required by the runtime path.
+If the reporting secret is absent or malformed, the deployment is not in a supported metered state.

@@ -15,7 +15,7 @@ This page describes which components talk to each other during a normal customer
 3. The Job reads inputs from PVC or GCS-backed `/data`
 4. The Job calls the Entitlement + Seal API over HTTPS
 5. The Job writes outputs back to the configured output path
-6. Optional `ubbagent` emits usage metrics for Marketplace billing
+6. Required `ubbagent` emits usage metrics for Marketplace billing
 
 ## Resource relationships
 
@@ -38,7 +38,6 @@ into the chart values consumed at deploy time.
 The chart creates or manages:
 
 - Job
-- optional Deployment and Service for console
 - ConfigMap
 - PersistentVolumeClaim
 - ServiceAccount
@@ -65,7 +64,7 @@ against the configured entitlement URL. In the recommended path, the caller iden
 
 ### Workload to billing sidecar
 
-When billing is enabled, the main workload and `ubbagent` cooperate through injected config and the Marketplace reporting secret. When reviewer mode is used, this sidecar is disabled entirely.
+The main workload and `ubbagent` cooperate through injected config and the Marketplace reporting secret. Supported Marketplace deployments keep this sidecar enabled.
 
 ## Trust boundaries
 

@@ -6,11 +6,11 @@ sidebar_position: 4
 
 # Google Cloud Marketplace
 
-This page covers the Marketplace-specific packaging, publisher prerequisites, verification path, and usage reporting model for the public customer bundle.
+This page covers the Marketplace-specific packaging, publisher prerequisites, supported customer deployment validation, and required usage reporting model for the public customer bundle.
 
 ## Package layout
 
-The public repository layout should include the deployable chart, Marketplace wiring, and reviewer documentation in a stable structure such as:
+The public repository layout should keep the deployable chart, Marketplace wiring, and customer docs in a stable structure such as:
 
 ```text
 LICENSE
@@ -20,13 +20,11 @@ manifest/
   application.yaml
   manifests.yaml
   chart/
-deployer/
-apptest/
 docs/
 examples/
 ```
 
-Operationally, the deployer image is expected to package `manifest/` and reference `schema.yaml` plus `manifest/application.yaml` during Marketplace deployment.
+Operationally, the Marketplace package should reference `schema.yaml` plus `manifest/application.yaml` during deployment and keep the chart inputs aligned with the published customer docs.
 
 ## Publisher prerequisites
 
@@ -56,9 +54,9 @@ Before publishing to Cloud Marketplace, make sure the publisher environment is p
 - Publish exact version tags
 - Prefer immutable image digests in release documentation and manifests
 
-## Verification flow for reviewers
+## Supported deployment validation
 
-The Marketplace verification path should cover installation, functionality, and uninstall:
+The supported customer path should validate installation, functionality, and clean removal with billing still enabled:
 
 ### Install
 
@@ -71,8 +69,8 @@ helm upgrade --install glassbox-mol-audit ./manifest/chart \
   --set storage.gcs.bucket=YOUR_BUCKET \
   --set workloadIdentity.enabled=true \
   --set workloadIdentity.gcpServiceAccount=your-sa@project.iam.gserviceaccount.com \
-  --set marketplace.reportingSecret="" \
-  --set ubbagent.enabled=false
+  --set marketplace.reportingSecret=marketplace-reporting-secret \
+  --set ubbagent.enabled=true
 ```
 
 ### Functionality check
@@ -93,7 +91,7 @@ If PVC storage is used instead of GCS, delete the PVC only when you intend to re
 
 ## Marketplace usage reporting and `ubbagent`
 
-Marketplace usage reporting is optional for reviewer testing but required for the full commercial path.
+Marketplace usage reporting through `ubbagent` is required for the supported commercial deployment path.
 
 ### Billing contract
 
@@ -116,6 +114,7 @@ This billing distinction is separate from category routing. Marketplace usage re
 
 The Hub-side or deployment-side billing flow is considered ready only when:
 
+- `ubbagent.enabled=true`
 - `UBBAGENT_ENABLED=true`
 - `MARKETPLACE_REPORTING_SECRET` is set
 - The reporting secret exists in the namespace
@@ -130,18 +129,9 @@ Mode-aware metric selection should prefer:
 - `UBBAGENT_METRIC_NAME_DEEP` for Deep runs
 - `UBBAGENT_METRIC_NAME` only as the legacy fallback
 
-### Reviewer mode
+## Deployment checklist
 
-For reviewer testing, it is valid to disable billing explicitly:
-
-- `ubbagent.enabled: false`
-- `marketplace.reportingSecret: ""`
-
-That path should run the workload without the sidecar and without emitting usage.
-
-## Reviewer checklist
-
-Reviewers should be able to confirm:
+Operators should be able to confirm:
 
 - Images are pinned and provenance is documented
 - The chart validates with `helm lint` and `helm template`
@@ -150,13 +140,12 @@ Reviewers should be able to confirm:
 - Run manifest and verification artifacts are emitted
 - Install and uninstall instructions are runnable as written
 
-## Recommended submission checks
+## Recommended release checks
 
 ```bash
-make review-gate
 helm lint ./manifest/chart
-helm template review-default ./manifest/chart >/dev/null
-helm template review-standard ./manifest/chart -f ./manifest/chart/values-standard.yaml >/dev/null
+helm template marketplace-standard ./manifest/chart -f ./manifest/chart/values-standard.yaml >/dev/null
+helm template marketplace-deep ./manifest/chart -f ./manifest/chart/values-gpu.yaml >/dev/null
 ```
 
 ## Related pages

@@ -21,7 +21,7 @@ Example IDs use the `EID-...` pattern and appear alongside specific risk or arti
 
 ## Why evidence IDs matter
 
-An evidence ID should let a reviewer answer:
+An evidence ID should let an operator or auditor answer:
 
 - which module produced this signal
 - which artifact should be opened next

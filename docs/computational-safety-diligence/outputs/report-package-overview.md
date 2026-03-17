@@ -12,16 +12,16 @@ Completed runs write their artifacts under a run-scoped output directory:
 <output-root>/<run_id>/
 ```
 
-This page describes the major artifact families a reviewer should expect to find in that folder.
+This page describes the major artifact families an operator or auditor should expect to find in that folder.
 
 ## Output structure at a glance
 
 | Artifact | Typical location | Primary audience | Purpose |
 | --- | --- | --- | --- |
-| Run summary | `results/summary.json` | Reviewer, operator, integrator | High-level run outcome and top-line results |
+| Run summary | `results/summary.json` | Operator, auditor, integrator | High-level run outcome and top-line results |
 | Module plan | `plans/*_module_plan.json` | Operator, auditor | In-scope modules, tier compliance, and claim acceptance |
 | Metrics | `results/metrics.json` | Operator, downstream automation | Structured machine-readable metrics |
-| HTML reports | `results/*.html` | Reviewer, customer-facing decision workflow | Human-readable report package |
+| HTML reports | `results/*.html` | Operator, customer-facing decision workflow | Human-readable report package |
 | Run manifest | `run_manifest.json` | Auditor, operator | Configuration, run identity, and runtime metadata |
 | Input hash manifest | `inputs/input_hashes.json` | Auditor, operator | Per-input integrity mapping |
 | Pre-seal metadata | `preseal.json` | Auditor | Inputs to the final sealing step |
@@ -64,7 +64,7 @@ _Use summary-style panels like this for the first pass through a report section.
 
 ![Target biology risk detail](../../report_images/target_biology_risk_detailed.png)
 
-_Detailed panels are the second-pass view. They matter when a reviewer needs to understand why a domain-specific section was scored the way it was and what evidence or missingness drove the result._
+_Detailed panels are the second-pass view. They matter when an operator or auditor needs to understand why a domain-specific section was scored the way it was and what evidence or missingness drove the result._
 
 ### Clinical precedent panel
 
@@ -76,7 +76,7 @@ _Clinical precedent is presented as a report-native section rather than a buried
 
 ![Projected failure modes panel](../../report_images/projected_failure_modes.png)
 
-_Failure-mode views are where the report shifts from descriptive evidence to decision-relevant risk framing. Reviewers should expect these panels to explain why a package should proceed, pause, or escalate._
+_Failure-mode views are where the report shifts from descriptive evidence to decision-relevant risk framing. Operators and auditors should expect these panels to explain why a package should proceed, pause, or escalate._
 
 ### CB-TRI panel
 

@@ -62,7 +62,7 @@ The main network interactions are:
 
 - pulling images from Artifact Registry
 - calling the Entitlement + Seal API over HTTPS
-- optional Marketplace reporting traffic from `ubbagent`
+- Marketplace reporting traffic from `ubbagent`
 - optional GCS access through the GCS Fuse path
 
 The default application service exposure remains conservative. The bundle documentation expects `ClusterIP` defaults for service types.

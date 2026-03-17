@@ -38,7 +38,7 @@ The example pack captures:
 - container rebuild scripts
 - output-hash verification support
 
-This is the first place to look when a reviewer asks, "Can I rebuild or verify this run environment?"
+This is the first place to look when an operator or auditor asks, "Can I rebuild or verify this run environment?"
 
 ## What `run_manifest.json` still adds
 

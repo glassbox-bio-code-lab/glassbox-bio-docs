@@ -15,11 +15,11 @@ The Marketplace customer bundle is a small deployment system rather than a large
 The Helm chart under `manifest/chart/` is the primary deployment unit. It defines:
 
 - the execution Job
-- optional console deployment
-- optional Marketplace `ubbagent` sidecar
+- the Marketplace `ubbagent` sidecar
 - storage mode selection
 - service account and Workload Identity wiring
 - resource profile selection
+- reserved console values that stay disabled in the current supported bundle
 
 ### Kubernetes Job
 
@@ -50,15 +50,15 @@ The chart supports:
 - PVC-backed storage
 - GCS-backed storage via GCS Fuse on GKE
 
-## Optional runtime components
+## Supporting runtime components
 
 ### `ubbagent`
 
-The Marketplace reporting sidecar is optional in reviewer mode and enabled in the commercial reporting path.
+The Marketplace reporting sidecar is required for the supported Marketplace-metered deployment path.
 
 ### Console
 
-The bundle also has an optional console image path, but the default Marketplace path keeps `console.enabled=false`.
+Some chart values reserve a future console surface, but the current supported customer bundle does not deploy console resources.
 
 ## Architecture boundaries
 

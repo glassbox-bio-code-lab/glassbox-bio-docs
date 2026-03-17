@@ -50,9 +50,12 @@ For the customer deployment path, prefer `config.entitlementAuthMode=google`.
 | Key | Type or example | Purpose |
 | --- | --- | --- |
 | `marketplace.reportingSecret` | Kubernetes Secret reference | Injects the Marketplace reporting credential |
+| `ubbagent.enabled` | `true` | Keeps Marketplace metering enabled in supported deployments |
 | `ubbagent.metricName` | `standard_audit_run` | Legacy hard override for usage metric selection |
 | `ubbagent.metricNameStandard` | `standard_audit_run` | Explicit Standard metric name |
 | `ubbagent.metricNameDeep` | `deep_audit_run` | Explicit Deep metric name |
+
+Supported Marketplace deployments require both a non-empty `marketplace.reportingSecret` and `ubbagent.enabled=true`.
 
 If `ubbagent.metricName` is set, it acts as a hard override. Leave it empty unless you have a controlled release reason to override the mode-aware defaults.
 

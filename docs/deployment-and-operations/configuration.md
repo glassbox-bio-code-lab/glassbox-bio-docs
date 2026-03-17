@@ -16,9 +16,8 @@ The base chart values define the default runtime contract for:
 
 - images
 - config and run behavior
-- Marketplace reporting
-- `ubbagent`
-- optional console
+- Marketplace reporting through required `ubbagent`
+- reserved console values
 - resources
 - storage
 - service account and Workload Identity
@@ -88,6 +87,8 @@ Marketplace reporting is controlled with:
 - `ubbagent.metricNameDeep`
 - `ubbagent.serviceName`
 
+Supported Marketplace deployments keep `ubbagent.enabled=true` and require a non-empty `marketplace.reportingSecret`.
+
 ### Identity configuration
 
 The Workload Identity path is controlled with:
@@ -97,10 +98,10 @@ The Workload Identity path is controlled with:
 
 ## Operational rules
 
-- Use image digests for production or reviewer-stable releases whenever possible
+- Use image digests for production-stable releases whenever possible
 - Treat Standard and Deep as distinct deployment profiles, not cosmetic variants
 - Do not treat Standard or Deep as a substitute for category selection or module-policy review
-- Keep `console.enabled=false` unless console exposure is intentionally required
+- Keep `console.enabled=false` in supported deployments because the current customer bundle does not deploy console resources
 - Use `job.enabled=false` for infrastructure-first installs, then enable the Job explicitly
 
 For the field-level reference, see [Config Reference](../reference/config-reference.md).

@@ -68,7 +68,7 @@ The primary output is a machine-verifiable risk artifact that can contain:
 - Threshold and confidence context
 - Integrity metadata
 
-The report package renders that artifact for a reviewer, but the artifact itself remains the canonical record for verification and replay.
+The report package renders that artifact for a human reader, but the artifact itself remains the canonical record for verification and replay.
 
 ## Key ideas to keep separate
 

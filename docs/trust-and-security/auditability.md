@@ -1,6 +1,6 @@
 ---
 title: Auditability
-description: How a reviewer can verify what happened in a run.
+description: How an auditor can verify what happened in a run.
 sidebar_position: 5
 ---
 
@@ -18,9 +18,9 @@ The minimum audit set should include:
 - `seal/seal.sig`
 - `seal/seal.svg`
 
-These files give a reviewer both the operational record and the verification record for the run.
+These files give an auditor or operator both the operational record and the verification record for the run.
 
-## What a reviewer should confirm
+## What an auditor should confirm
 
 At minimum, an auditor should be able to answer:
 
