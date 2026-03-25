@@ -8,4 +8,4 @@ sidebar_position: 1
 
 The IP/FTO add-on extends Glassbox Bio with patent and freedom-to-operate review workflows.
 
-Use this section for guidance on IP/FTO workflow, inputs, outputs, interpretation, and limitations.
+COMING SOON

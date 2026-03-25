@@ -5,5 +5,4 @@ sidebar_position: 4
 ---
 
 # IP/FTO Outputs
-
-Use this page to review the IP/FTO output types, confidence boundaries, and how they relate to the broader diligence decision.
+COMING SOON

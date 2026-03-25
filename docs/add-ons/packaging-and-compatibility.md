@@ -6,4 +6,4 @@ sidebar_position: 2
 
 # Packaging and Compatibility
 
-Use this page to understand how add-ons are enabled, what they depend on, and which workflows or tiers they can extend.
+Currently add-ons are only supported in the PreFlight UI deployment as a Kubernetes application on Google CLoud Marketplace.

@@ -6,4 +6,4 @@ sidebar_position: 3
 
 # IP/FTO Workflow
 
-Use this page for the IP/FTO workflow from activation through final review.
+COMING SOON
