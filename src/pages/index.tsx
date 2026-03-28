@@ -71,7 +71,7 @@ function HomepageHeader() {
           Verification infrastructure for AI-designed biology.
         </p>
         <div className={styles.buttons}>
-          <Link className="btn-primary" to="/docs">
+          <Link className="btn-primary" to="/docs/getting-started">
             Open documentation
           </Link>
           <Link className="btn-outline" to={supportPageUrl}>
