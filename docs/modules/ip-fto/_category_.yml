@@ -5,8 +5,8 @@ collapsible: true
 link:
   type: generated-index
   title: IP/FTO
-  description: IP and freedom-to-operate documentation for the add-on module.
-  slug: /add-ons/ip-fto
+  description: IP and freedom-to-operate documentation for the module.
+  slug: /modules/ip-fto
   keywords:
     - ip
     - fto

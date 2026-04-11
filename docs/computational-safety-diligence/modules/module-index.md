@@ -8,9 +8,9 @@ sidebar_position: 2
 
 The core analysis workflow uses different module families based on project category, available evidence, and execution profile.
 
-## How modules differ from add-ons
+## How analysis modules differ from Modules
 
-Modules are part of the main analysis workflow. They are not the same as add-ons, which extend the workflow with optional capabilities.
+Analysis modules are part of the main analysis workflow. They are not the same as Modules, which extend the workflow with optional capabilities.
 
 ## Common module families
 

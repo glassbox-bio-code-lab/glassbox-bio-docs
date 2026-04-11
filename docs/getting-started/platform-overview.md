@@ -1,6 +1,6 @@
 ---
 title: Platform Overview
-description: High-level map of Computational Safety Diligence, PreFlight UI, and Add-Ons.
+description: High-level map of Computational Safety Diligence, PreFlight UI, and Modules.
 sidebar_position: 2
 ---
 
@@ -26,7 +26,7 @@ The documentation is organized around three main workflows:
 
 - **Computational Safety Diligence** for the core analysis workflow, outputs, module coverage, and report interpretation
 - **PreFlight UI** for packaging, validating, and certifying inputs before a run starts
-- **Add-Ons** for optional workflow extensions such as IP and freedom-to-operate analysis
+- **Modules** for optional workflow extensions such as IP and freedom-to-operate analysis
 
 ## Verification architecture
 

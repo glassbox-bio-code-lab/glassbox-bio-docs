@@ -1,6 +1,6 @@
 ---
 title: Interpretation
-description: How to read the IP/FTO add-on outputs responsibly.
+description: How to read the IP/FTO module outputs responsibly.
 sidebar_position: 5
 ---
 

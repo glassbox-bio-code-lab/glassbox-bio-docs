@@ -1,6 +1,6 @@
 ---
 title: Multi-Component Operations
-description: Operational playbooks for running PreFlight UI, core analysis, and add-ons together.
+description: Operational playbooks for running PreFlight UI, core analysis, and Modules together.
 sidebar_position: 11
 ---
 

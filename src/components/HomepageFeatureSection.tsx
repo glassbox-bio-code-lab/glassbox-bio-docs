@@ -52,8 +52,8 @@ const BeginList: BeginItem[] = [
     ),
   },
   {
-    title: "Add-Ons",
-    href: "/docs/add-ons/overview",
+    title: "Modules",
+    href: "/docs/modules/overview",
     description: (
       <>
         Optional capability layers that extend the core workflow. Each module
@@ -99,7 +99,7 @@ const SurfaceList: SurfaceItem[] = [
       "The deterministic analysis system that generates the final decision artifact.",
   },
   {
-    title: "Add-On Modules",
+    title: "Modules",
     description:
       "Specialized analytical layers that extend the core diligence workflow.",
   },

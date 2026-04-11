@@ -35,7 +35,7 @@ This section explains how to read those outputs as one coherent system rather th
 
 - Use [PreFlight UI](../preflight-ui/overview.md) for input validation and submission readiness.
 - Use [Deployment and Operations](../deployment-and-operations/overview.md) for packaging, deployment, and runtime administration.
-- Use [Add-Ons](../add-ons/overview.md) for optional extension workflows.
+- Use [Modules](../modules/overview.md) for optional extension workflows.
 
 ## Recommended reading order
 

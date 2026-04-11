@@ -50,6 +50,6 @@ Best first pages:
 
 ## I need optional product extensions
 
-Start with **Add-Ons**.
+Start with **Modules**.
 
-Use the add-on overview and workflow pages to find the extension that matches your task.
+Use the module overview and workflow pages to find the extension that matches your task.
