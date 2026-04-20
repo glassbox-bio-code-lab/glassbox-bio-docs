@@ -105,7 +105,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "GLASSBOX BIO",
+      title: "",
       logo: {
         alt: "Glassbox Bio",
         src: "img/logo.png",
